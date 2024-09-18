@@ -1,9 +1,35 @@
-new_name = "Fonte Automotiva Jfa Storm Lite 70a Bivolt Carregador".lower()
+import docx
+from collections import defaultdict
 
-if "bob" not in new_name and "lite" not in new_name and "light" not in new_name  and "controle" not in new_name and 'jfa' in new_name and "usina" not in new_name:
-    if "70a" in new_name or "70" in new_name or "70 amperes" in new_name or "70amperes" in new_name or "70 a" in new_name:
-        print(new_name)
-        
-if "bob" not in new_name and  ("lite" in new_name or "light" in new_name) and "controle" not in new_name and 'jfa' in new_name and "usina" not in new_name:
-    if "70a" in new_name or "70" in new_name or "70 amperes" in new_name or "70amperes" in new_name or "70 a" in new_name:
-        print(new_name)
+def extrair_informacoes_por_loja(caminho_arquivo):
+    # Carrega o documento Word
+    doc = docx.Document(caminho_arquivo)
+    
+    # Dicionário para armazenar informações por loja
+    lojas = defaultdict(list)
+    loja_atual = None
+    
+    # Itera sobre os parágrafos do documento
+    for paragrafo in doc.paragraphs:
+        texto = paragrafo.text.strip()
+        if texto:
+            # Verifica se o texto é um nome de loja
+            if texto.startswith("*") and texto.endswith("*"):
+                loja_atual = texto.strip("*")
+            elif loja_atual:
+                # Adiciona o texto à lista da loja atual
+                lojas[loja_atual].append(texto)
+    
+    return lojas
+
+def main():
+    caminho_arquivo = 'dados_extraidos.docx'  # Substitua pelo caminho do seu arquivo Word
+    lojas = extrair_informacoes_por_loja(caminho_arquivo)
+    
+    # Imprime as informações agrupadas por loja
+    for loja, detalhes in lojas.items():
+        print(f"\nLoja: {loja}")
+        print(detalhes)
+
+if __name__ == "__main__":
+    main()

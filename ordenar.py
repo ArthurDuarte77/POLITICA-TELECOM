@@ -6,22 +6,16 @@ from docx.shared import Inches
 from spire.doc.common import *
 from spire.doc import *
 
-
-naoIndentificado= []
-storm40 = []
-storm60 = []
-lite60 = []
-lite70 = []
-storm70 = []
-bob90 = []
-storm120 = []
-lite120 = []
-bob120 = []
-storm200 = []
-lite200 = []
-mono200 = []
-bob200 = []
-
+naoIndentificado = []
+equalizador = []
+fonte12v8a = []
+fonte24v6a = []
+fonte48v15a = []
+fonte48v30a = []
+fonte48v40a = []
+inversor1000w = []
+inversor3000w = []
+inversor5000w = []
 
 def read_docx(file_path):
     doc = docx.Document(file_path)
@@ -42,38 +36,9 @@ def read_text(text):
         for line in lines:
             if line.startswith("Modelo:"):
                 if current_item:
-                    if current_item:
-                        if current_item['Modelo'] == "Nao indentificado":
-                            naoIndentificado.append(format_item_dif(current_item))
-                        if current_item['Modelo'] == "FONTE 40A":
-                            storm40.append((format_item(current_item), current_item['Loja']))
-                        if current_item['Modelo'] == "FONTE 60A LITE":
-                            lite60.append((format_item(current_item), current_item['Loja']))
-                        if current_item['Modelo'] == "FONTE 60A":
-                            storm60.append((format_item(current_item), current_item['Loja']))
-                        if current_item['Modelo'] == "FONTE 70A LITE":
-                            lite70.append((format_item(current_item), current_item['Loja']))
-                        if current_item['Modelo'] == "FONTE 70A":
-                            storm70.append((format_item(current_item), current_item['Loja']))
-                        if current_item['Modelo'] == "FONTE 90 BOB":
-                            bob90.append((format_item(current_item), current_item['Loja']))
-                        if current_item['Modelo'] == "FONTE 120":
-                            storm120.append((format_item(current_item), current_item['Loja']))
-                        if current_item['Modelo'] == "FONTE 120A LITE":
-                            lite120.append((format_item(current_item), current_item['Loja']))
-                        if current_item['Modelo'] == "FONTE 120 BOB":
-                            bob120.append((format_item(current_item), current_item['Loja']))
-                        if current_item['Modelo'] == "FONTE 200A":
-                            storm200.append((format_item(current_item), current_item['Loja']))
-                        if current_item['Modelo'] == "FONTE 200A LITE":
-                            lite200.append((format_item(current_item), current_item['Loja']))
-                        if current_item['Modelo'] == "FONTE 200 BOB":
-                            bob200.append((format_item(current_item), current_item['Loja']))
-                        if current_item['Modelo'] == "FONTE 200 MONO":
-                            mono200.append((format_item(current_item), current_item['Loja']))
-                        current_item = {}
+                    process_item(current_item)
+                    current_item = {}
                 current_item['Modelo'] = line.split("Modelo:", 1)[1].strip()
-                
             elif line.startswith("URL:"):
                 current_item['URL'] = line.split("URL:", 1)[1].strip()
             elif line.startswith("Nome:"):
@@ -92,107 +57,68 @@ def read_text(text):
                 current_item['Cupom'] = line.split("Cupom:", 1)[1].strip()
                 
         if current_item:
-            if current_item['Modelo'] == "Nao indentificado":
-                naoIndentificado.append(format_item_dif(current_item))
-            if current_item['Modelo'] == "FONTE 40A":
-                storm40.append((format_item(current_item), current_item['Loja']))
-            if current_item['Modelo'] == "FONTE 60A LITE":
-                lite60.append((format_item(current_item), current_item['Loja']))
-            if current_item['Modelo'] == "FONTE 60A":
-                storm60.append((format_item(current_item), current_item['Loja']))
-            if current_item['Modelo'] == "FONTE 70A LITE":
-                lite70.append((format_item(current_item), current_item['Loja']))
-            if current_item['Modelo'] == "FONTE 70A":
-                storm70.append((format_item(current_item), current_item['Loja']))
-            if current_item['Modelo'] == "FONTE 90 BOB":
-                bob90.append((format_item(current_item), current_item['Loja']))
-            if current_item['Modelo'] == "FONTE 120":
-                storm120.append((format_item(current_item), current_item['Loja']))
-            if current_item['Modelo'] == "FONTE 120A LITE":
-                lite120.append((format_item(current_item), current_item['Loja']))
-            if current_item['Modelo'] == "FONTE 120 BOB":
-                bob120.append((format_item(current_item), current_item['Loja']))
-            if current_item['Modelo'] == "FONTE 200A":
-                storm200.append((format_item(current_item), current_item['Loja']))
-            if current_item['Modelo'] == "FONTE 200A LITE":
-                lite200.append((format_item(current_item), current_item['Loja']))
-            if current_item['Modelo'] == "FONTE 200 BOB":
-                bob200.append((format_item(current_item), current_item['Loja']))
-            if current_item['Modelo'] == "FONTE 200 MONO":
-                mono200.append((format_item(current_item), current_item['Loja']))
+            process_item(current_item)
             current_item = {}
 
+def process_item(item):
+    if item['Modelo'] == "Nao indentificado":
+        naoIndentificado.append(format_item_dif(item))
+    elif item['Modelo'] == "EQUALIZADOR PARA BANCO DE BATERIAS":
+        equalizador.append((format_item(item), item['Loja']))
+    elif item['Modelo'] == "FONTE NOBREAK 12V/8A":
+        fonte12v8a.append((format_item(item), item['Loja']))
+    elif item['Modelo'] == "FONTE NOBREAK 24V/6A":
+        fonte24v6a.append((format_item(item), item['Loja']))
+    elif item['Modelo'] == "FONTE NOBREAK -48V 15A":
+        fonte48v15a.append((format_item(item), item['Loja']))
+    elif item['Modelo'] == "FONTE NOBREAK -48V 30A":
+        fonte48v30a.append((format_item(item), item['Loja']))
+    elif item['Modelo'] == "FONTE NOBREAK -48V 40A 10A":
+        fonte48v40a.append((format_item(item), item['Loja']))
+    elif item['Modelo'] == "INVERSOR OFF GRID SENOIDAL PURA JFA 1000W 48V/220V RACK":
+        inversor1000w.append((format_item(item), item['Loja']))
+    elif item['Modelo'] == "INVERSOR OFF GRID SENOIDAL PURA JFA 3000W 48/220V C/ GER RACK":
+        inversor3000w.append((format_item(item), item['Loja']))
+    elif item['Modelo'] == "INVERSOR OFF GRID SENOIDAL PURA JFA 5000W 48/220V C/ GER RACK":
+        inversor5000w.append((format_item(item), item['Loja']))
 
 def format_item(item):
-    formatted_item = f"{item['Cupom']}  {item['Loja']} – {item['Lugar']} – Preço Anúncio: R$ {item['Preço']} – Preço Política: R$ {item['Preço Previsto']} ({item['Tipo']})\n{item['URL']}\n"
+    formatted_item = f"{item['Cupom']}  {item['Loja']} – {item['Lugar']} – PreçoAnúncio: R$ {item['Preço']} – Preço Política: R$ {item['Preço Previsto']} ({item['Tipo']}) {item['URL']}\n"
     return formatted_item
 
 def format_item_dif(item):
     formatted_item = f"{item['URL']}\n"
     return formatted_item
+
 lojas = {}
 
 for item_path in os.listdir(r"dados/"):
     file_path = os.path.join(r"dados/", item_path)
     text = read_docx(file_path)
-
     read_text(text)
 
 output_doc = docx.Document()
-for item in storm40:
-    if item[1] not in lojas:
-        lojas[item[1]] = []
-    lojas[item[1]].append((item[0], "FONTE 40A"))
-for item in lite60:
-    if item[1] not in lojas:
-        lojas[item[1]] = []
-    lojas[item[1]].append((item[0], "FONTE 60A LITE"))
-for item in storm60:
-    if item[1] not in lojas:
-        lojas[item[1]] = []
-    lojas[item[1]].append((item[0], "FONTE 60A"))
-for item in lite70:
-    if item[1] not in lojas:
-        lojas[item[1]] = []
-    lojas[item[1]].append((item[0], "FONTE 70A LITE"))
-for item in storm70:
-    if item[1] not in lojas:
-        lojas[item[1]] = []
-    lojas[item[1]].append((item[0], "FONTE 70A"))
-for item in bob90:
-    if item[1] not in lojas:
-        lojas[item[1]] = []
-    lojas[item[1]].append((item[0], "FONTE 90 BOB"))
-for item in bob120:
-    if item[1] not in lojas:
-        lojas[item[1]] = []
-    lojas[item[1]].append((item[0], "FONTE 120 BOB"))
-for item in lite120:
-    if item[1] not in lojas:
-        lojas[item[1]] = []
-    lojas[item[1]].append((item[0], "FONTE 120A LITE"))
-for item in storm120:
-    if item[1] not in lojas:
-        lojas[item[1]] = []
-    lojas[item[1]].append((item[0], "FONTE 120A"))
-for item in bob200:
-    if item[1] not in lojas:
-        lojas[item[1]] = []
-    lojas[item[1]].append((item[0], "FONTE 200 BOB"))
-for item in lite200:
-    if item[1] not in lojas:
-        lojas[item[1]] = []
-    lojas[item[1]].append((item[0], "FONTE 200A LITE"))
-for item in mono200:
-    if item[1] not in lojas:
-        lojas[item[1]] = []
-    lojas[item[1]].append((item[0], "FONTE 200 MONO"))
-for item in storm200:
-    if item[1] not in lojas:
-        lojas[item[1]] = []
-    lojas[item[1]].append((item[0], "FONTE 200A"))
+
+produtos = [
+    (equalizador, "EQUALIZADOR PARA BANCO DE BATERIAS"),
+    (fonte12v8a, "FONTE NOBREAK 12V/8A"),
+    (fonte24v6a, "FONTE NOBREAK 24V/6A"),
+    (fonte48v15a, "FONTE NOBREAK -48V 15A"),
+    (fonte48v30a, "FONTE NOBREAK -48V 30A"),
+    (fonte48v40a, "FONTE NOBREAK -48V 40A 10A"),
+    (inversor1000w, "INVERSOR OFF GRID SENOIDAL PURA JFA 1000W 48V/220V RACK"),
+    (inversor3000w, "INVERSOR OFF GRID SENOIDAL PURA JFA 3000W 48/220V C/ GER RACK"),
+    (inversor5000w, "INVERSOR OFF GRID SENOIDAL PURA JFA 5000W 48/220V C/ GER RACK")
+]
+
+for lista, modelo in produtos:
+    for item in lista:
+        if item[1] not in lojas:
+            lojas[item[1]] = []
+        lojas[item[1]].append((item[0], modelo))
+
 for i in lojas:
-    output_doc.add_paragraph().add_run(f"*{i}*\n").bold = True
+    output_doc.add_paragraph().add_run(f"*{i}*").bold = True
     for item, modelo in lojas[i]:
         output_doc.add_paragraph(f"{modelo} - {item}").paragraph_format.left_indent = Inches(0.5)
         
