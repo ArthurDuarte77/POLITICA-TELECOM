@@ -35,56 +35,56 @@ urls_visitadas = []
 for index, i in df.iterrows():
     if i['CONSTRUÇÃO DE CUSTO '] == "EQUALIZADOR PARA BANCO DE BATERIAS":
         if i['Anuncio'] == "Classico":
-            equalizadorClassico = round(i['PREÇO ML '], 2) - 0.05
+            equalizadorClassico = round(i['PREÇO ML '], 2) - 0.01
         elif i['Anuncio'] == "Premium":
-            equalizadorPremium = round(i['PREÇO ML '], 2) - 0.05
+            equalizadorPremium = round(i['PREÇO ML '], 2) - 0.01
     elif i['CONSTRUÇÃO DE CUSTO '] == "FONTE NOBREAK 12V/8A":
         if i['Anuncio'] == "Classico":
-            fonte12v8aClassico = round(i['PREÇO ML '], 2) - 0.05
+            fonte12v8aClassico = round(i['PREÇO ML '], 2) - 0.01
         elif i['Anuncio'] == 'Premium':
-            fonte12v8aPremium = round(i['PREÇO ML '], 2) - 0.05
+            fonte12v8aPremium = round(i['PREÇO ML '], 2) - 0.01
         
     elif i['CONSTRUÇÃO DE CUSTO '] == "FONTE NOBREAK 24V/6A":
         if i['Anuncio'] == "Classico":
-            fonte24v6aClassico = round(i['PREÇO ML '], 2) - 0.05
+            fonte24v6aClassico = round(i['PREÇO ML '], 2) - 0.01
         elif i['Anuncio'] == 'Premium':
-            fonte24v6aPremium = round(i['PREÇO ML '], 2) - 0.05
+            fonte24v6aPremium = round(i['PREÇO ML '], 2) - 0.01
         
     elif i['CONSTRUÇÃO DE CUSTO '] == "FONTE NOBREAK -48V 15A 15A":
         if i['Anuncio'] == "Classico":
-            fonte48v15aClassico = round(i['PREÇO ML '], 2) - 0.05
+            fonte48v15aClassico = round(i['PREÇO ML '], 2) - 0.01
         elif i['Anuncio'] == 'Premium':
-            fonte48v15aPremium = round(i['PREÇO ML '], 2) - 0.05
+            fonte48v15aPremium = round(i['PREÇO ML '], 2) - 0.01
         
     elif i['CONSTRUÇÃO DE CUSTO '] == "FONTE NOBREAK -48V 30A 15A":
         if i['Anuncio'] == "Classico":
-            fonte48v30aClassico = round(i['PREÇO ML '], 2) - 0.05
+            fonte48v30aClassico = round(i['PREÇO ML '], 2) - 0.01
         elif i['Anuncio'] == 'Premium':
-            fonte48v30aPremium = round(i['PREÇO ML '], 2) - 0.05
+            fonte48v30aPremium = round(i['PREÇO ML '], 2) - 0.01
         
     elif i['CONSTRUÇÃO DE CUSTO '] == "FONTE NOBREAK -48V 40A 10A":
         if i['Anuncio'] == "Classico":
-            fonte48v40aClassico = round(i['PREÇO ML '], 2) - 0.05
+            fonte48v40aClassico = round(i['PREÇO ML '], 2) - 0.01
         elif i['Anuncio'] == 'Premium':
-            fonte48v40aPremium = round(i['PREÇO ML '], 2) - 0.05
+            fonte48v40aPremium = round(i['PREÇO ML '], 2) - 0.01
         
     elif i['CONSTRUÇÃO DE CUSTO '] == "INVERSOR OFF GRID SENOIDAL PURA JFA 1000W 48V/220V  RACK ":
         if i['Anuncio'] == "Classico":
-            inversor1000wClassico = round(i['PREÇO ML '], 2) - 0.05
+            inversor1000wClassico = round(i['PREÇO ML '], 2) - 0.01
         elif i['Anuncio'] == 'Premium':
-            inversor1000wPremium = round(i['PREÇO ML '], 2) - 0.05
+            inversor1000wPremium = round(i['PREÇO ML '], 2) - 0.01
         
     elif i['CONSTRUÇÃO DE CUSTO '] == "INVERSOR OFF GRID SENOIDAL PURA JFA 3000W 48/220V C/  GER RACK ":
         if i['Anuncio'] == "Classico":
-            inversor3000wClassico = round(i['PREÇO ML '], 2) - 0.05
+            inversor3000wClassico = round(i['PREÇO ML '], 2) - 0.01
         elif i['Anuncio'] == 'Premium':
-            inversor3000wPremium = round(i['PREÇO ML '], 2) - 0.05
+            inversor3000wPremium = round(i['PREÇO ML '], 2) - 0.01
         
     elif i['CONSTRUÇÃO DE CUSTO '] == "INVERSOR OFF GRID SENOIDAL PURA JFA 5000W 48/220V C/  GER RACK ":
         if i['Anuncio'] == "Classico":
-            inversor5000wClassico = round(i['PREÇO ML '], 2) - 0.05
+            inversor5000wClassico = round(i['PREÇO ML '], 2) - 0.01
         elif i['Anuncio'] == 'Premium':
-            inversor5000wPremium = round(i['PREÇO ML '], 2) - 0.05
+            inversor5000wPremium = round(i['PREÇO ML '], 2) - 0.01
         
 # if os.path.exists("dados_scrapy.docx"):
 #     doc = Document("dados_scrapy.docx")
@@ -230,12 +230,12 @@ class MlSpider(scrapy.Spider):
                         if kit_match:
                             num_kits = int(kit_match.group(1))
                             if num_kits > 1 and price:
-                                price = price / num_kits
+                                price = round(price / num_kits, 2)
                                 cupom = f"KIT: {num_kits} UNIDADES"
-                    if listing_type == "Clássico" and price and cupom == "":
+                    if listing_type == "Clássico" and price:
                         if price >= equalizadorClassico:
                             continue
-                    elif listing_type == "Premium" and price and cupom == "":
+                    elif listing_type == "Premium" and price:
                         if price >= equalizadorPremium:
                             continue
                     
