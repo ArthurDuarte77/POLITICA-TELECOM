@@ -98,7 +98,6 @@ def executar_codigo():
 
 # Agendar a execução nos horários especificados
 schedule.every().day.at("08:00").do(executar_codigo)
-schedule.every().day.at("16:00").do(executar_codigo)
 
 while True:
     schedule.run_pending()

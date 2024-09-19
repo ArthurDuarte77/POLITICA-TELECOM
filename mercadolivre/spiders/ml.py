@@ -161,7 +161,7 @@ class MlSpider(scrapy.Spider):
         self.option_selected_new = self.palavra
         search = ""
         if self.option_selected == "EQUALIZADOR PARA BANCO DE BATERIAS":
-            search = "equalizador para banco de baterias"
+            search = "equalizador de baterias"
         elif self.option_selected == "FONTE NOBREAK 12V/8A":
             search = "fonte nobreak 12v 8a"
         elif self.option_selected == "FONTE NOBREAK 24V/6A":
@@ -181,10 +181,14 @@ class MlSpider(scrapy.Spider):
         #search = search.replace(" ", "%20")
         # yield scrapy.Request(dont_filter=True, url=f"https://lista.mercadolivre.com.br/acessorios-veiculos/{search}_OrderId_PRICE_NoIndex_True", callback=self.parse_all)BRAND_22292586
         # yield scrapy.Request(dont_filter=True, url=f"https://lista.mercadolivre.com.br/acessorios-veiculos/{search}_Frete_Full_OrderId_PRICE_NoIndex_True", callback=self.parse_all)
-        yield scrapy.Request(dont_filter=True, url=f"https://lista.mercadolivre.com.br/{search}_Frete_Full_OrderId_PRICE_BRAND_2466336_NoIndex_True", callback=self.parse_all)
-        yield scrapy.Request(dont_filter=True, url=f"https://lista.mercadolivre.com.br/{search}_OrderId_PRICE_BRAND_2466336_NoIndex_True", callback=self.parse_all)
-        yield scrapy.Request(dont_filter=True, url=f"https://lista.mercadolivre.com.br/{search}_Frete_Full_OrderId_PRICE_BRAND_22292586_NoIndex_True", callback=self.parse_all)
-        yield scrapy.Request(dont_filter=True, url=f"https://lista.mercadolivre.com.br/{search}_OrderId_PRICE_BRAND_22292586_NoIndex_True", callback=self.parse_all)
+        if self.option_selected == "EQUALIZADOR PARA BANCO DE BATERIAS":
+            yield scrapy.Request(dont_filter=True, url=f"https://lista.mercadolivre.com.br/{search}_Frete_Full_OrderId_PRICE_NoIndex_True", callback=self.parse_all)
+            yield scrapy.Request(dont_filter=True, url=f"https://lista.mercadolivre.com.br/{search}_OrderId_PRICE_NoIndex_True", callback=self.parse_all)
+        else:
+            yield scrapy.Request(dont_filter=True, url=f"https://lista.mercadolivre.com.br/{search}_Frete_Full_OrderId_PRICE_BRAND_2466336_NoIndex_True", callback=self.parse_all)
+            yield scrapy.Request(dont_filter=True, url=f"https://lista.mercadolivre.com.br/{search}_OrderId_PRICE_BRAND_2466336_NoIndex_True", callback=self.parse_all)
+            yield scrapy.Request(dont_filter=True, url=f"https://lista.mercadolivre.com.br/{search}_Frete_Full_OrderId_PRICE_BRAND_22292586_NoIndex_True", callback=self.parse_all)
+            yield scrapy.Request(dont_filter=True, url=f"https://lista.mercadolivre.com.br/{search}_OrderId_PRICE_BRAND_22292586_NoIndex_True", callback=self.parse_all)
         
     
     def parse_all(self, response):
@@ -217,16 +221,24 @@ class MlSpider(scrapy.Spider):
             new_name = unidecode.unidecode(new_name.lower())
             if not url:
                 url = item.xpath('.//a[@class="ui-search-item__group__element ui-search-link__title-card ui-search-link"]/@href').get()
-            if "taramps" in new_name or "stetson" in new_name or "usina" in new_name or "controle" in new_name:
+            if "taramps" in new_name or "stetson" in new_name or "usina" in new_name:
                 continue
             if self.option_selected == "EQUALIZADOR PARA BANCO DE BATERIAS":     
-                if "equalizador" in new_name and "bateria" in new_name:
+                if "equalizador" in new_name and ("bateria" in new_name or "baterias" in new_name) and "jfa" in new_name:
+                    if "kit" in new_name:
+                        kit_match = re.search(r'kit\s+(\d+)', new_name)
+                        if kit_match:
+                            num_kits = int(kit_match.group(1))
+                            if num_kits > 1 and price:
+                                price = price / num_kits
+                                cupom = f"KIT: {num_kits} UNIDADES"
                     if listing_type == "Clássico" and price and cupom == "":
                         if price >= equalizadorClassico:
                             continue
                     elif listing_type == "Premium" and price and cupom == "":
                         if price >= equalizadorPremium:
                             continue
+                    
                     yield scrapy.Request(dont_filter=True, url=url, callback=self.parse_product, meta={'name': name, 'loja': loja, 'price':price, 'listing_type': listing_type, 'cupom': cupom})
                         
             elif self.option_selected == "FONTE NOBREAK 12V/8A":
