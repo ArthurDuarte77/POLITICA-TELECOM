@@ -69,9 +69,9 @@ def process_item(item):
         fonte12v8a.append((format_item(item), item['Loja']))
     elif item['Modelo'] == "FONTE NOBREAK 24V/6A":
         fonte24v6a.append((format_item(item), item['Loja']))
-    elif item['Modelo'] == "FONTE NOBREAK -48V 15A":
+    elif item['Modelo'] == "FONTE NOBREAK -48V 15A 15A":
         fonte48v15a.append((format_item(item), item['Loja']))
-    elif item['Modelo'] == "FONTE NOBREAK -48V 30A":
+    elif item['Modelo'] == "FONTE NOBREAK -48V 30A 15A":
         fonte48v30a.append((format_item(item), item['Loja']))
     elif item['Modelo'] == "FONTE NOBREAK -48V 40A 10A":
         fonte48v40a.append((format_item(item), item['Loja']))

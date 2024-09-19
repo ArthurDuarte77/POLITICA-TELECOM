@@ -384,6 +384,7 @@ class MlSpider(scrapy.Spider):
                     return round(i['PREÇO ML '], 2)
 
     def parse_location(self, response):
+        
         name = response.meta['name']
         url = response.meta['url']
         new_price_float = response.meta['price']
