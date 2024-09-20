@@ -178,7 +178,7 @@ class MlSpider(scrapy.Spider):
             search = "inversor 3000w 48/220v onda senoidal pura jfa ger rack"
         elif self.option_selected == "INVERSOR OFF GRID SENOIDAL PURA JFA 5000W 48/220V C/ GER RACK":
             search = "inversor 5000w 48/220v onda senoidal pura jfa ger rack"
-        #search = search.replace(" ", "%20")
+        search = search.replace(" ", "-")
         # yield scrapy.Request(dont_filter=True, url=f"https://lista.mercadolivre.com.br/acessorios-veiculos/{search}_OrderId_PRICE_NoIndex_True", callback=self.parse_all)BRAND_22292586
         # yield scrapy.Request(dont_filter=True, url=f"https://lista.mercadolivre.com.br/acessorios-veiculos/{search}_Frete_Full_OrderId_PRICE_NoIndex_True", callback=self.parse_all)
         if self.option_selected == "EQUALIZADOR PARA BANCO DE BATERIAS":
@@ -193,7 +193,10 @@ class MlSpider(scrapy.Spider):
     
     def parse_all(self, response):
         for item in response.xpath('//div/div[3]/section/ol/li[@class="ui-search-layout__item"]'):
-            new_name = item.xpath('.//h2[@class="ui-search-item__title ui-search-item__group__element"]/a/text()').get()
+            # new_name = item.xpath('.//h2[@class="poly-box poly-component__title"]').get()
+            new_name = item.xpath('.//h2[@class="ui-search-item__title"]/text()').get()
+            if not new_name:
+                new_name = item.xpath('.//h2[@class="ui-search-item__title ui-search-item__group__element"]/a/text()').get()
             name = new_name
             if not new_name:
                 print(response.url)
@@ -217,10 +220,13 @@ class MlSpider(scrapy.Spider):
                 listing_type = "Clássico"
             elif item.xpath('.//span[@class="ui-search-item__group__element ui-search-installments ui-search-color--LIGHT_GREEN"]').get():
                 listing_type = "Premium"
-            url = item.xpath('.//h2[@class="ui-search-item__title ui-search-item__group__element"]/a/@href').get()
+            url = item.xpath('.//h2[@class="poly-box poly-component__title"]/a/@href').get()
             new_name = unidecode.unidecode(new_name.lower())
+            url = item.xpath('.//div/div/div[2]/div[1]/a[@class="ui-search-item__group__element ui-search-link__title-card ui-search-link"]/@href').get()
             if not url:
                 url = item.xpath('.//a[@class="ui-search-item__group__element ui-search-link__title-card ui-search-link"]/@href').get()
+            if not url:
+                url = item.xpath('.//h2[@class="ui-search-item__title ui-search-item__group__element"]/a/@href').get()
             if "taramps" in new_name or "stetson" in new_name or "usina" in new_name:
                 continue
             if self.option_selected == "EQUALIZADOR PARA BANCO DE BATERIAS":     
@@ -238,7 +244,6 @@ class MlSpider(scrapy.Spider):
                     elif listing_type == "Premium" and price:
                         if price >= equalizadorPremium:
                             continue
-                    
                     yield scrapy.Request(dont_filter=True, url=url, callback=self.parse_product, meta={'name': name, 'loja': loja, 'price':price, 'listing_type': listing_type, 'cupom': cupom})
                         
             elif self.option_selected == "FONTE NOBREAK 12V/8A":
