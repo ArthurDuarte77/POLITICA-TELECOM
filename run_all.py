@@ -71,14 +71,14 @@ def run_command(args):
 
 commands = [
     ["python", "rodar.py", "EQUALIZADOR PARA BANCO DE BATERIAS", is_cupom],
-    # ["python", "rodar.py", "FONTE NOBREAK 12V/8A", is_cupom],
-    # ["python", "rodar.py", "FONTE NOBREAK 24V/6A", is_cupom],
-    # ["python", "rodar.py", "FONTE NOBREAK -48V 15A 15A", is_cupom],
-    # ["python", "rodar.py", "FONTE NOBREAK -48V 30A 15A", is_cupom],
-    # ["python", "rodar.py", "FONTE NOBREAK -48V 40A 10A", is_cupom],
-    # ["python", "rodar.py", "INVERSOR OFF GRID SENOIDAL PURA JFA 1000W 48V/220V RACK", is_cupom],
-    # ["python", "rodar.py", "INVERSOR OFF GRID SENOIDAL PURA JFA 3000W 48/220V C/ GER RACK", is_cupom],
-    # ["python", "rodar.py", "INVERSOR OFF GRID SENOIDAL PURA JFA 5000W 48/220V C/ GER RACK", is_cupom],
+    ["python", "rodar.py", "FONTE NOBREAK 12V/8A", is_cupom],
+    ["python", "rodar.py", "FONTE NOBREAK 24V/6A", is_cupom],
+    ["python", "rodar.py", "FONTE NOBREAK -48V 15A 15A", is_cupom],
+    ["python", "rodar.py", "FONTE NOBREAK -48V 30A 15A", is_cupom],
+    ["python", "rodar.py", "FONTE NOBREAK -48V 40A 10A", is_cupom],
+    ["python", "rodar.py", "INVERSOR OFF GRID SENOIDAL PURA JFA 1000W 48V/220V RACK", is_cupom],
+    ["python", "rodar.py", "INVERSOR OFF GRID SENOIDAL PURA JFA 3000W 48/220V C/ GER RACK", is_cupom],
+    ["python", "rodar.py", "INVERSOR OFF GRID SENOIDAL PURA JFA 5000W 48/220V C/ GER RACK", is_cupom],
 ]
 
 

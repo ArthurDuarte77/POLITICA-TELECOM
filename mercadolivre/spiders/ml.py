@@ -148,7 +148,7 @@ class MlSpider(scrapy.Spider):
     option_selected_new = ""
 
     name = 'ml'
-    start_urls = ["https://lista.mercadolivre.com.br/fonte-jfa"]
+    start_urls = ["https://lista.mercadolivre.com.br"]
     
     def __init__(self, palavra=None, cookie=None, *args, **kwargs):
         super(MlSpider, self).__init__(*args, **kwargs)
@@ -181,14 +181,14 @@ class MlSpider(scrapy.Spider):
         search = search.replace(" ", "-")
         # yield scrapy.Request(dont_filter=True, url=f"https://lista.mercadolivre.com.br/acessorios-veiculos/{search}_OrderId_PRICE_NoIndex_True", callback=self.parse_all)BRAND_22292586
         # yield scrapy.Request(dont_filter=True, url=f"https://lista.mercadolivre.com.br/acessorios-veiculos/{search}_Frete_Full_OrderId_PRICE_NoIndex_True", callback=self.parse_all)
-        if self.option_selected == "EQUALIZADOR PARA BANCO DE BATERIAS":
-            yield scrapy.Request(dont_filter=True, url=f"https://lista.mercadolivre.com.br/{search}_Frete_Full_OrderId_PRICE_NoIndex_True", callback=self.parse_all)
-            yield scrapy.Request(dont_filter=True, url=f"https://lista.mercadolivre.com.br/{search}_OrderId_PRICE_NoIndex_True", callback=self.parse_all)
-        else:
-            yield scrapy.Request(dont_filter=True, url=f"https://lista.mercadolivre.com.br/{search}_Frete_Full_OrderId_PRICE_BRAND_2466336_NoIndex_True", callback=self.parse_all)
-            yield scrapy.Request(dont_filter=True, url=f"https://lista.mercadolivre.com.br/{search}_OrderId_PRICE_BRAND_2466336_NoIndex_True", callback=self.parse_all)
-            yield scrapy.Request(dont_filter=True, url=f"https://lista.mercadolivre.com.br/{search}_Frete_Full_OrderId_PRICE_BRAND_22292586_NoIndex_True", callback=self.parse_all)
-            yield scrapy.Request(dont_filter=True, url=f"https://lista.mercadolivre.com.br/{search}_OrderId_PRICE_BRAND_22292586_NoIndex_True", callback=self.parse_all)
+        # if self.option_selected == "EQUALIZADOR PARA BANCO DE BATERIAS":
+        #     yield scrapy.Request(dont_filter=True, url=f"https://lista.mercadolivre.com.br/{search}_Frete_Full_OrderId_PRICE_NoIndex_True", callback=self.parse_all)
+        #     yield scrapy.Request(dont_filter=True, url=f"https://lista.mercadolivre.com.br/{search}_OrderId_PRICE_NoIndex_True", callback=self.parse_all)
+        # else:
+        yield scrapy.Request( url=f"https://lista.mercadolivre.com.br/{search}_Frete_Full_OrderId_PRICE_BRAND_2466336_NoIndex_True", callback=self.parse_all)
+        yield scrapy.Request( url=f"https://lista.mercadolivre.com.br/{search}_OrderId_PRICE_BRAND_2466336_NoIndex_True", callback=self.parse_all)
+        yield scrapy.Request( url=f"https://lista.mercadolivre.com.br/{search}_Frete_Full_OrderId_PRICE_BRAND_22292586_NoIndex_True", callback=self.parse_all)
+        yield scrapy.Request(url=f"https://lista.mercadolivre.com.br/{search}_OrderId_PRICE_BRAND_22292586_NoIndex_True", callback=self.parse_all)
         
     
     def parse_all(self, response):
@@ -197,9 +197,12 @@ class MlSpider(scrapy.Spider):
             new_name = item.xpath('.//h2[@class="ui-search-item__title"]/text()').get()
             if not new_name:
                 new_name = item.xpath('.//h2[@class="ui-search-item__title ui-search-item__group__element"]/a/text()').get()
+            if not new_name:
+                new_name = item.xpath('.//h2[@class="poly-box poly-component__title"]/a/text()').get()
             name = new_name
             if not new_name:
                 print(response.url)
+                continue
             price = extract_price_new(response=item)
             if not price:
                 print(response.url)
@@ -216,10 +219,18 @@ class MlSpider(scrapy.Spider):
             #     cupom += " Mais de um item"
             loja = ""
             listing_type = "Not Found"
-            if item.xpath('.//span[@class="ui-search-item__group__element ui-search-installments ui-search-color--BLACK"]').get():
+            if item.xpath('.//span[@class="andes-money-amount poly-phrase-price poly-text-primary andes-money-amount--cents-comma andes-money-amount--compact"]').get():
                 listing_type = "Clássico"
-            elif item.xpath('.//span[@class="ui-search-item__group__element ui-search-installments ui-search-color--LIGHT_GREEN"]').get():
+            elif item.xpath('.//span[@class="andes-money-amount poly-phrase-price poly-text-positive andes-money-amount--cents-comma andes-money-amount--compact"]').get():
                 listing_type = "Premium"
+            if listing_type == "Not Found":
+                if "sem juros" in item.xpath('.//div[2]/div[1]/span/text()').get():
+                    listing_type = "Premium"
+                elif item.xpath('.//div[2]/div[1]/span'):
+                    listing_type = "Clássico"
+            if listing_type == "Not Found":
+                print(response.url)
+                continue
             url = item.xpath('.//h2[@class="poly-box poly-component__title"]/a/@href').get()
             new_name = unidecode.unidecode(new_name.lower())
             url = item.xpath('.//div/div/div[2]/div[1]/a[@class="ui-search-item__group__element ui-search-link__title-card ui-search-link"]/@href').get()
@@ -227,6 +238,8 @@ class MlSpider(scrapy.Spider):
                 url = item.xpath('.//a[@class="ui-search-item__group__element ui-search-link__title-card ui-search-link"]/@href').get()
             if not url:
                 url = item.xpath('.//h2[@class="ui-search-item__title ui-search-item__group__element"]/a/@href').get()
+            if not url:
+                url = item.xpath('.//h2[@class="poly-box poly-component__title"]/a/@href').get()
             if "taramps" in new_name or "stetson" in new_name or "usina" in new_name:
                 continue
             if self.option_selected == "EQUALIZADOR PARA BANCO DE BATERIAS":     
