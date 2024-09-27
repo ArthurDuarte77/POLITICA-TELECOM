@@ -74,17 +74,21 @@ for index, i in df.iterrows():
             inversor5000wPremium = round(i['PREÇO ML '], 2) - 0.01
         
 #"search_filters": "BRAND=2466336@category=MLB3381@", #MLB2227, 22292586
+      
+def get_diferenca(price, previsto):
+    return (price / previsto) * 100;
+
         
 options_req = [
-    "EQUALIZADOR PARA BANCO DE BATERIAS",
+    "equalizador de baterias",
     "FONTE NOBREAK 12V/8A",
     "FONTE NOBREAK 24V/6A",
     "FONTE NOBREAK -48V 15A 15A",
     "FONTE NOBREAK -48V 30A 15A",
     "FONTE NOBREAK -48V 40A 10A",
-    "INVERSOR OFF GRID SENOIDAL PURA JFA 1000W 48V/220V RACK",
-    "INVERSOR OFF GRID SENOIDAL PURA JFA 3000W 48/220V C/ GER RACK",
-    "INVERSOR OFF GRID SENOIDAL PURA JFA 5000W 48/220V C/ GER RACK",
+    "INVERSOR SENOIDAL JFA 1000W",
+    "INVERSOR SENOIDAL JFA 3000W",
+    "INVERSOR SENOIDAL JFA 5000W",
 ]
         
 url = "https://app.nubimetrics.com/api/search/items"
@@ -162,22 +166,28 @@ base_params = {
 # Parâmetros específicos
 params_list = [
     {"search_filters": "BRAND=2466336@"},
-    {"search_filters": "BRAND=2466336@"},
     {"search_filters": "BRAND=22292586@"},
-    {"search_filters": "BRAND=22292586@"}
 ]
+
 
 # Lista para armazenar todos os resultados filtrados
 all_filtered_results = []
 
 # Loop para cada opção e para cada conjunto de parâmetros
 for option in tqdm(options_req):
+    if option == "equalizador de baterias":
+        params_list = [
+            {"search_filters": ""},
+        ]
+    else:
+        params_list = [
+            {"search_filters": "BRAND=2466336@"},
+            {"search_filters": "BRAND=22292586@"},
+        ]
+        
     for params in params_list:
-        # Atualizar o campo 'to_search' com a opção atual
         params.update(base_params)
-        params['to_search'] = option
-
-        # Inicializar offset para paginação
+        params['to_search'] = option.lower()
         offset = 0
         while True:
             params['offset'] = offset
@@ -204,7 +214,7 @@ for option in tqdm(options_req):
                 listing_type_id = item.get('listing_type_id', '')
                 if real_price:
                     real_price = float(real_price)
-                if option == "EQUALIZADOR PARA BANCO DE BATERIAS":
+                if option == "equalizador de baterias":
                     item['modelo'] = "EQUALIZADOR PARA BANCO DE BATERIAS"
                     if "equalizador" in title and ("bateria" in title or "baterias" in title) and "jfa" in title:
                         if "kit" in title:
@@ -215,92 +225,127 @@ for option in tqdm(options_req):
                                     price = round(price / num_kits, 2)
                                     cupom = f"KIT: {num_kits} UNIDADES"
                         if listing_type_id == "gold_pro" and price < equalizadorPremium:
+                            item['diferenca'] = get_diferenca(price, equalizadorPremium)
                             item['price_previsto'] = equalizadorPremium
                             all_filtered_results.append(item) 
 
                         elif price < equalizadorClassico:
-                            item['price_previsto'] = equalizadorClassico
-                            all_filtered_results.append(item)
+                            item['diferenca'] = get_diferenca(price, equalizadorClassico)
+                            if item['diferenca'] > 70:
+                                item['price_previsto'] = equalizadorClassico
+                                all_filtered_results.append(item)
                 elif option == "FONTE NOBREAK 12V/8A":
                     item['modelo'] = "FONTE NOBREAK 12V/8A"
                     if "fonte" in title and "nobreak" in title and "12v" in title and "8a" in title:
                         if listing_type_id == "gold_pro" and price < fonte12v8aPremium:
-                            item['price_previsto'] = fonte12v8aPremium
-                            all_filtered_results.append(item) 
+                            item['diferenca'] = get_diferenca(price, fonte12v8aPremium)
+                            if item['diferenca'] > 70:
+                                item['price_previsto'] = fonte12v8aPremium
+                                all_filtered_results.append(item) 
 
                         elif price < fonte12v8aClassico:
-                            item['price_previsto'] = fonte12v8aClassico                            
-                            all_filtered_results.append(item)
+                            item['diferenca'] = get_diferenca(price, fonte12v8aClassico)
+                            if item['diferenca'] > 70:
+                                item['price_previsto'] = fonte12v8aClassico                            
+                                all_filtered_results.append(item)
                 elif option == "FONTE NOBREAK 24V/6A":
                     item['modelo'] = "FONTE NOBREAK 24V/6A"
                     if "fonte" in title and "nobreak" in title and "24v" in title and "6a" in title:
                         if listing_type_id == "gold_pro" and price < fonte24v6aPremium:
-                            item['price_previsto'] = fonte24v6aPremium
-                            all_filtered_results.append(item) 
+                            item['diferenca'] = get_diferenca(price, fonte24v6aPremium)
+                            if item['diferenca'] > 70:
+                                item['price_previsto'] = fonte24v6aPremium
+                                all_filtered_results.append(item) 
 
                         elif price < fonte24v6aClassico:
-                            item['price_previsto'] = fonte24v6aClassico                            
-                            all_filtered_results.append(item)
+                            item['diferenca'] = get_diferenca(price, fonte24v6aClassico)
+                            if item['diferenca'] > 70:
+                                item['price_previsto'] = fonte24v6aClassico                            
+                                all_filtered_results.append(item)
                 elif option == "FONTE NOBREAK -48V 15A 15A":
                     item['modelo'] = "FONTE NOBREAK -48V 15A 15A"
                     if "fonte" in title and "nobreak" in title and "48v" in title and "15a" in title:
                         if listing_type_id == "gold_pro" and price < fonte48v15aPremium:
-                            item['price_previsto'] = fonte48v15aPremium
-                            all_filtered_results.append(item) 
+                            item['diferenca'] = get_diferenca(price, fonte48v15aPremium)
+                            if item['diferenca'] > 70:
+                                item['price_previsto'] = fonte48v15aPremium
+                                all_filtered_results.append(item) 
 
                         elif price < fonte48v15aClassico:
-                            item['price_previsto'] = fonte48v15aClassico                            
-                            all_filtered_results.append(item)
+                            item['diferenca'] = get_diferenca(price, fonte48v15aClassico)
+                            if item['diferenca'] > 70:
+                                item['price_previsto'] = fonte48v15aClassico                            
+                                all_filtered_results.append(item)
                 elif option == "FONTE NOBREAK -48V 30A 15A":
                     item['modelo'] = "FONTE NOBREAK -48V 30A 15A"
                     if "fonte" in title and "nobreak" in title and "48v" in title and "30a" in title:
                         if listing_type_id == "gold_pro" and price < fonte48v30aPremium:
-                            item['price_previsto'] = fonte48v30aPremium
-                            all_filtered_results.append(item) 
+                            item['diferenca'] = get_diferenca(price, fonte48v30aPremium)
+                            if item['diferenca'] > 70:
+                                item['price_previsto'] = fonte48v30aPremium
+                                all_filtered_results.append(item) 
 
                         elif price < fonte48v30aClassico:
-                            item['price_previsto'] = fonte48v30aClassico                            
-                            all_filtered_results.append(item)
+                            item['diferenca'] = get_diferenca(price, fonte48v30aClassico)
+                            if item['diferenca'] > 70:
+                                item['price_previsto'] = fonte48v30aClassico                            
+                                all_filtered_results.append(item)
                 elif option == "FONTE NOBREAK -48V 40A 10A":
                     item['modelo'] = "FONTE NOBREAK -48V 40A 10A"
                     if "fonte" in title and "nobreak" in title and ("48v" in title or "48" in title) and ("40a" in title or "40" in title):
                         if listing_type_id == "gold_pro" and price < fonte48v40aPremium:
-                            item['price_previsto'] = fonte48v40aPremium
-                            all_filtered_results.append(item) 
+                            item['diferenca'] = get_diferenca(price, fonte48v40aPremium)
+                            if item['diferenca'] > 70:
+                                item['price_previsto'] = fonte48v40aPremium
+                                all_filtered_results.append(item) 
 
                         elif price < fonte48v40aClassico:
-                            item['price_previsto'] = fonte48v40aClassico                            
-                            all_filtered_results.append(item)
-                elif option == "INVERSOR OFF GRID SENOIDAL PURA JFA 1000W 48V/220V RACK":
+                            item['diferenca'] = get_diferenca(price, fonte48v40aClassico)
+                            if item['diferenca'] > 70:
+                                item['price_previsto'] = fonte48v40aClassico                            
+                                all_filtered_results.append(item)
+                elif option == "INVERSOR SENOIDAL JFA 1000W":
                     item['modelo'] = "INVERSOR OFF GRID SENOIDAL PURA JFA 1000W 48V/220V RACK"
-                    if "inversor" in title and "senoidal" in title and "1000w" in title and ("48v" in title or "48" in title) and ("220v" in title or "220" in title) and "ger" in title and "rack" in title:
+                    if "inversor" in title and "senoidal" in title and "1000w" in title and ("48v" in title or "48" in title) and ("220v" in title or "220" in title):
                         if listing_type_id == "gold_pro" and price < inversor1000wPremium:
-                            item['price_previsto'] = inversor1000wPremium
-                            all_filtered_results.append(item) 
+                            item['diferenca'] = get_diferenca(price, inversor1000wPremium)
+                            if item['diferenca'] > 70:
+                                item['price_previsto'] = inversor1000wPremium
+                                all_filtered_results.append(item) 
 
                         elif price < inversor1000wClassico:
-                            item['price_previsto'] = inversor1000wClassico                            
-                            all_filtered_results.append(item)
-                elif option == "INVERSOR OFF GRID SENOIDAL PURA JFA 3000W 48/220V C/ GER RACK":
+                            item['diferenca'] = get_diferenca(price, inversor1000wClassico)
+                            if item['diferenca'] > 70:
+                                item['price_previsto'] = inversor1000wClassico                            
+                                all_filtered_results.append(item)
+                elif option == "INVERSOR SENOIDAL JFA 3000W":
                     item['modelo'] = "INVERSOR OFF GRID SENOIDAL PURA JFA 3000W 48/220V C/ GER RACK"
-                    if "inversor" in title and "senoidal" in title and "3000w" in title and ("48v" in title or "48" in title) and ("220v" in title or "220" in title) and "ger" in title and "rack" in title:
+                    if "inversor" in title and "senoidal" in title and "3000w" in title and ("48v" in title or "48" in title) and ("220v" in title or "220" in title):#and "ger" in title and "rack" in title
                         if listing_type_id == "gold_pro" and price < inversor3000wPremium:
-                            item['price_previsto'] = inversor3000wPremium
-                            all_filtered_results.append(item) 
+                            item['diferenca'] = get_diferenca(price, inversor3000wPremium)
+                            if item['diferenca'] > 70:
+                                item['price_previsto'] = inversor3000wPremium
+                                all_filtered_results.append(item) 
 
                         elif price < inversor3000wClassico:
-                            item['price_previsto'] = inversor3000wClassico                            
-                            all_filtered_results.append(item)
-                elif option == "INVERSOR OFF GRID SENOIDAL PURA JFA 5000W 48/220V C/ GER RACK":
+                            item['diferenca'] = get_diferenca(price, inversor3000wClassico)
+                            if item['diferenca'] > 70:
+                                item['price_previsto'] = inversor3000wClassico                            
+                                all_filtered_results.append(item)
+                elif option == "INVERSOR SENOIDAL JFA 5000W":
                     item['modelo'] = "INVERSOR OFF GRID SENOIDAL PURA JFA 5000W 48/220V C/ GER RACK"
-                    if "inversor" in title and "senoidal" in title and "5000w" in title and ("48v" in title or "48" in title) and ("220v" in title or "220" in title) and "ger" in title and "rack" in title:
+                    if "inversor" in title and "senoidal" in title and "5000w" in title and ("48v" in title or "48" in title) and ("220v" in title or "220" in title):#and "ger" in title and "rack" in title
                         if listing_type_id == "gold_pro" and price < inversor5000wPremium:
-                            item['price_previsto'] = inversor5000wPremium
-                            all_filtered_results.append(item) 
+                            item['diferenca'] = get_diferenca(price, inversor5000wPremium)
+                            if item['diferenca'] > 70:
+                                item['price_previsto'] = inversor5000wPremium
+                                all_filtered_results.append(item) 
 
                         elif price < inversor5000wClassico:
-                            item['price_previsto'] = inversor5000wClassico                            
-                            all_filtered_results.append(item)
+                            item['price_previsto'] = inversor5000wClassico 
+                            if item['diferenca'] > 70:
+                                item['diferenca'] = get_diferenca(price, inversor5000wClassico)                           
+                                all_filtered_results.append(item)
                     
 
             # Atualizar o offset para a próxima página
@@ -387,13 +432,13 @@ def enviar(grouped_by_seller):
             time.sleep(1)
             pyautogui.hotkey('ctrl', 'enter')
             time.sleep(1)
-            loja_info = get_loja(item['Seller'])
             for item in items:
                 if item['Listing Type'] == "gold_special":
                     item['Listing Type'] = "Clássico"
                 else:
                     item['Listing Type'] = "Premium"
                 
+                loja_info = get_loja(item['Seller'])
                 keyboard.write(f"{item['modelo']} - {item['Seller']} - {loja_info} - Preço Anúncio: {item['Price']} - Preço Política: {item['price_previsto']} ({item['Listing Type']})")
                 time.sleep(1)
                 pyautogui.hotkey('ctrl', 'enter')
@@ -414,6 +459,7 @@ formatted_results = [
         "Title": result['title'],
         "Price": result['price'],
         "price_previsto": result['price_previsto'],
+        "diferenca": result['diferenca'],
         "Listing Type": result['listing_type_id'],
         "Link": result['permalink'],
         "attributes": result['attributes'],
@@ -428,8 +474,9 @@ for item in formatted_results:
     grouped_by_seller[seller].append(item)
     
 grouped_by_seller = dict(grouped_by_seller)
-    
+
 enviar(grouped_by_seller)
+
 # Salva os dados em um arquivo JSON
 
 # with open('filtered_results.json', 'w', encoding='utf-8') as json_file:

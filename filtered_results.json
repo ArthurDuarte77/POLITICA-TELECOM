@@ -1,38 +1,17 @@
 [
     {
-        "modelo": "FONTE NOBREAK 12V/8A",
-        "Seller": "PLAYNETWORK TECNOLOGIA",
-        "Title": "Fonte Nobreak Retificadora 12v8a Jfa",
-        "Price": 617.0,
-        "price_previsto": 619.99,
+        "modelo": "EQUALIZADOR PARA BANCO DE BATERIAS",
+        "Seller": "DINO TELECOM",
+        "Title": "Kit 10 Equalizador Balanceador Para Banco De Baterias - Jfa",
+        "Price": 1689.9,
+        "price_previsto": 183.99,
+        "diferenca": 91.8473830099462,
         "Listing Type": "gold_pro",
-        "Link": "https://www.mercadolivre.com.br/fonte-nobreak-retificadora-12v8a-jfa/p/MLB22801014#wid=MLB3617995158&sid=unknown",
+        "Link": "https://produto.mercadolivre.com.br/MLB-4284143434-kit-10-equalizador-balanceador-para-banco-de-baterias-jfa-_JM",
         "attributes": [
-            "{id:BRAND,name:Marca,value_id:2466336,value_name:JFA,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:2466336,name:JFA,struct:null,source:1}],source:1,value_type:string}",
-            "{id:COLOR,name:Cor,value_id:52049,value_name:Preto,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:52049,name:Preto,struct:null,source:1}],source:1,value_type:string}",
-            "{id:GTIN,name:Código universal de produto,value_id:null,value_name:7898554806055,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:null,name:7898554806055,struct:null,source:1}],source:1,value_type:string}",
-            "{id:ITEM_CONDITION,name:Condição do item,value_id:2230284,value_name:Novo,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:2230284,name:Novo,struct:null,source:2860837171021627}],source:2860837171021627,value_type:list}",
-            "{id:LINE,name:Linha,value_id:18501706,value_name:Retificadora,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:18501706,name:Retificadora,struct:null,source:1}],source:1,value_type:string}",
-            "{id:MODEL,name:Modelo,value_id:18501707,value_name:12V8A,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:18501707,name:12V8A,struct:null,source:1}],source:1,value_type:string}",
-            "{id:PEAK_POWER,name:Potência pico,value_id:16936817,value_name:48VA,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:{number:48,unit:VA},values:[{id:16936817,name:48VA,struct:{unit:VA,number:48},source:1}],source:1,value_type:number_unit}"
-        ]
-    },
-    {
-        "modelo": "FONTE NOBREAK 12V/8A",
-        "Seller": "PLAYNETWORK TECNOLOGIA",
-        "Title": "Fonte Nobreak Retificadora 12v8a Jfa",
-        "Price": 617.0,
-        "price_previsto": 619.99,
-        "Listing Type": "gold_pro",
-        "Link": "https://www.mercadolivre.com.br/fonte-nobreak-retificadora-12v8a-jfa/p/MLB22801014#wid=MLB3617995158&sid=unknown",
-        "attributes": [
-            "{id:BRAND,name:Marca,value_id:2466336,value_name:JFA,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:2466336,name:JFA,struct:null,source:1}],source:1,value_type:string}",
-            "{id:COLOR,name:Cor,value_id:52049,value_name:Preto,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:52049,name:Preto,struct:null,source:1}],source:1,value_type:string}",
-            "{id:GTIN,name:Código universal de produto,value_id:null,value_name:7898554806055,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:null,name:7898554806055,struct:null,source:1}],source:1,value_type:string}",
-            "{id:ITEM_CONDITION,name:Condição do item,value_id:2230284,value_name:Novo,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:2230284,name:Novo,struct:null,source:2860837171021627}],source:2860837171021627,value_type:list}",
-            "{id:LINE,name:Linha,value_id:18501706,value_name:Retificadora,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:18501706,name:Retificadora,struct:null,source:1}],source:1,value_type:string}",
-            "{id:MODEL,name:Modelo,value_id:18501707,value_name:12V8A,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:18501707,name:12V8A,struct:null,source:1}],source:1,value_type:string}",
-            "{id:PEAK_POWER,name:Potência pico,value_id:16936817,value_name:48VA,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:{number:48,unit:VA},values:[{id:16936817,name:48VA,struct:{number:48,unit:VA},source:1}],source:1,value_type:number_unit}"
+            "{id:BRAND,name:Marca do produto eletrônico,value_id:null,value_name:JFA ELETRÔNICOS - Balance Balanceador,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:null,name:JFA ELETRÔNICOS - Balance Balanceador,struct:null,source:81068639424647}],source:81068639424647,value_type:string}",
+            "{id:GTIN,name:Código universal de produto,value_id:null,value_name:7898554806819,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:null,name:7898554806819,struct:null,source:81068639424647}],source:81068639424647,value_type:string}",
+            "{id:ITEM_CONDITION,name:Condição do item,value_id:2230284,value_name:Novo,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:2230284,name:Novo,struct:null,source:81068639424647}],source:81068639424647,value_type:list}"
         ]
     },
     {
@@ -41,6 +20,7 @@
         "Title": "Fonte Nobreak Retificadora 24v/6a Rack Ou Bancada - Jfa",
         "Price": 599.9,
         "price_previsto": 619.99,
+        "diferenca": 96.75962515524444,
         "Listing Type": "gold_pro",
         "Link": "https://produto.mercadolivre.com.br/MLB-3387302349-fonte-nobreak-retificadora-24v6a-rack-ou-bancada-jfa-_JM",
         "attributes": [
@@ -55,30 +35,12 @@
         ]
     },
     {
-        "modelo": "FONTE NOBREAK 24V/6A",
-        "Seller": "DINO TELECOM",
-        "Title": "Fonte Nobreak Retificadora 24v/6a Rack Ou Bancada - Jfa",
-        "Price": 599.9,
-        "price_previsto": 619.99,
-        "Listing Type": "gold_pro",
-        "Link": "https://produto.mercadolivre.com.br/MLB-3387302349-fonte-nobreak-retificadora-24v6a-rack-ou-bancada-jfa-_JM",
-        "attributes": [
-            "{id:ALPHANUMERIC_MODEL,name:Modelo alfanumérico,value_id:-1,value_name:null,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:-1,name:null,struct:null,source:3376461333454861}],source:3376461333454861,value_type:string}",
-            "{id:BRAND,name:Marca,value_id:2466336,value_name:JFA,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:2466336,name:JFA,struct:null,source:2860837171021627}],source:2860837171021627,value_type:string}",
-            "{id:GTIN,name:Código universal de produto,value_id:null,value_name:7898554806048,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:null,name:7898554806048,struct:null,source:7571550481372610}],source:7571550481372610,value_type:string}",
-            "{id:ITEM_CONDITION,name:Condição do item,value_id:2230284,value_name:Novo,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:2230284,name:Novo,struct:null,source:2860837171021627}],source:2860837171021627,value_type:list}",
-            "{id:LINE,name:Linha,value_id:null,value_name:Retificadora,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:null,name:Retificadora,struct:null,source:2860837171021627}],source:2860837171021627,value_type:string}",
-            "{id:MODEL,name:Modelo,value_id:null,value_name:24V 6A,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:null,name:24V 6A,struct:null,source:2860837171021627}],source:2860837171021627,value_type:string}",
-            "{id:PEAK_POWER,name:Potência pico,value_id:null,value_name:24615VA,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:{number:24615,unit:VA},values:[{id:null,name:24615VA,struct:{number:24615,unit:VA},source:2860837171021627}],source:2860837171021627,value_type:number_unit}",
-            "{id:WEIGHT,name:Peso,value_id:null,value_name:1.12 kg,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:{number:1.12,unit:kg},values:[{id:null,name:1.12 kg,struct:{unit:kg,number:1.12},source:1}],source:1,value_type:number_unit}"
-        ]
-    },
-    {
         "modelo": "FONTE NOBREAK -48V 15A 15A",
         "Seller": "DINO TELECOM",
         "Title": "Fonte Nobreak Retificadora Gerenciável -48v/15a/15a - Jfa",
         "Price": 3349.9,
         "price_previsto": 3399.99,
+        "diferenca": 98.52676037282464,
         "Listing Type": "gold_pro",
         "Link": "https://produto.mercadolivre.com.br/MLB-3833030916-fonte-nobreak-retificadora-gerenciavel-48v15a15a-jfa-_JM",
         "attributes": [
@@ -98,42 +60,7 @@
         "Title": "Fonte Nobreak -48v/30a/15a Jfa Cor Preto",
         "Price": 3000.0,
         "price_previsto": 3399.99,
-        "Listing Type": "gold_pro",
-        "Link": "https://produto.mercadolivre.com.br/MLB-5068268396-fonte-nobreak-48v30a15a-jfa-cor-preto-_JM",
-        "attributes": [
-            "{id:BRAND,name:Marca,value_id:2466336,value_name:JFA,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:2466336,name:JFA,struct:null,source:6288553339613210}],source:6288553339613210,value_type:string}",
-            "{id:ITEM_CONDITION,name:Condição do item,value_id:2230581,value_name:Usado,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:2230581,name:Usado,struct:null,source:6288553339613210}],source:6288553339613210,value_type:list}",
-            "{id:LINE,name:Linha,value_id:24879160,value_name:Retificadora - Similar Volt Algcom,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:24879160,name:Retificadora - Similar Volt Algcom,struct:null,source:6288553339613210}],source:6288553339613210,value_type:string}",
-            "{id:MODEL,name:Modelo,value_id:24879161,value_name:-48V/40/10A,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:24879161,name:-48V/40/10A,struct:null,source:6288553339613210}],source:6288553339613210,value_type:string}",
-            "{id:PEAK_POWER,name:Potência pico,value_id:24879162,value_name:24960VA,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:{number:24960,unit:VA},values:[{id:24879162,name:24960VA,struct:{number:24960,unit:VA},source:6288553339613210}],source:6288553339613210,value_type:number_unit}",
-            "{id:WEIGHT,name:Peso,value_id:null,value_name:6.25 kg,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:{number:6.25,unit:kg},values:[{id:null,name:6.25 kg,struct:{unit:kg,number:6.25},source:6288553339613210}],source:6288553339613210,value_type:number_unit}"
-        ]
-    },
-    {
-        "modelo": "FONTE NOBREAK -48V 15A 15A",
-        "Seller": "DINO TELECOM",
-        "Title": "Fonte Nobreak Retificadora Gerenciável -48v/15a/15a - Jfa",
-        "Price": 3349.9,
-        "price_previsto": 3399.99,
-        "Listing Type": "gold_pro",
-        "Link": "https://produto.mercadolivre.com.br/MLB-3833030916-fonte-nobreak-retificadora-gerenciavel-48v15a15a-jfa-_JM",
-        "attributes": [
-            "{id:ALPHANUMERIC_MODEL,name:Modelo alfanumérico,value_id:-1,value_name:null,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:-1,name:null,struct:null,source:3376461333454861}],source:3376461333454861,value_type:string}",
-            "{id:BRAND,name:Marca,value_id:2466336,value_name:JFA,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:2466336,name:JFA,struct:null,source:2860837171021627}],source:2860837171021627,value_type:string}",
-            "{id:GTIN,name:Código universal de produto,value_id:null,value_name:7898554805874,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:null,name:7898554805874,struct:null,source:7571550481372610}],source:7571550481372610,value_type:string}",
-            "{id:ITEM_CONDITION,name:Condição do item,value_id:2230284,value_name:Novo,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:2230284,name:Novo,struct:null,source:2860837171021627}],source:2860837171021627,value_type:list}",
-            "{id:LINE,name:Linha,value_id:null,value_name:Retificadora,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:null,name:Retificadora,struct:null,source:2860837171021627}],source:2860837171021627,value_type:string}",
-            "{id:MODEL,name:Modelo,value_id:null,value_name:-48V 15A 15A,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:null,name:-48V 15A 15A,struct:null,source:2860837171021627}],source:2860837171021627,value_type:string}",
-            "{id:PEAK_POWER,name:Potência pico,value_id:null,value_name:1584VA,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:{number:1584,unit:VA},values:[{id:null,name:1584VA,struct:{number:1584,unit:VA},source:2860837171021627}],source:2860837171021627,value_type:number_unit}",
-            "{id:WEIGHT,name:Peso,value_id:null,value_name:6.25 kg,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:{number:6.25,unit:kg},values:[{id:null,name:6.25 kg,struct:{number:6.25,unit:kg},source:1183438784296846}],source:1183438784296846,value_type:number_unit}"
-        ]
-    },
-    {
-        "modelo": "FONTE NOBREAK -48V 15A 15A",
-        "Seller": "HENRIBASTOOS",
-        "Title": "Fonte Nobreak -48v/30a/15a Jfa Cor Preto",
-        "Price": 3000.0,
-        "price_previsto": 3399.99,
+        "diferenca": 88.23555363398128,
         "Listing Type": "gold_pro",
         "Link": "https://produto.mercadolivre.com.br/MLB-5068268396-fonte-nobreak-48v30a15a-jfa-cor-preto-_JM",
         "attributes": [
@@ -151,6 +78,7 @@
         "Title": "Fonte Jfa Retificadora Nobreak Gerenciável -48v/30a/15a Cor Preto",
         "Price": 3600.0,
         "price_previsto": 3849.99,
+        "diferenca": 93.50673638113346,
         "Listing Type": "gold_pro",
         "Link": "https://www.mercadolivre.com.br/fonte-jfa-retificadora-nobreak-gerenciavel-48v30a15a-cor-preto/p/MLB27758576#wid=MLB3690078195&sid=unknown",
         "attributes": [
@@ -169,6 +97,7 @@
         "Title": "Fonte Jfa Retificadora Nobreak Gerenciável -48v/30a/15a",
         "Price": 3750.61,
         "price_previsto": 3849.99,
+        "diferenca": 97.41869459401194,
         "Listing Type": "gold_pro",
         "Link": "https://produto.mercadolivre.com.br/MLB-3851974019-fonte-jfa-retificadora-nobreak-gerenciavel-48v30a15a-_JM",
         "attributes": [
@@ -185,57 +114,7 @@
         "Title": "Fonte Nobreak -48v/30a/15a Jfa Cor Preto",
         "Price": 3000.0,
         "price_previsto": 3849.99,
-        "Listing Type": "gold_pro",
-        "Link": "https://produto.mercadolivre.com.br/MLB-5068268396-fonte-nobreak-48v30a15a-jfa-cor-preto-_JM",
-        "attributes": [
-            "{id:BRAND,name:Marca,value_id:2466336,value_name:JFA,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:2466336,name:JFA,struct:null,source:6288553339613210}],source:6288553339613210,value_type:string}",
-            "{id:ITEM_CONDITION,name:Condição do item,value_id:2230581,value_name:Usado,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:2230581,name:Usado,struct:null,source:6288553339613210}],source:6288553339613210,value_type:list}",
-            "{id:LINE,name:Linha,value_id:24879160,value_name:Retificadora - Similar Volt Algcom,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:24879160,name:Retificadora - Similar Volt Algcom,struct:null,source:6288553339613210}],source:6288553339613210,value_type:string}",
-            "{id:MODEL,name:Modelo,value_id:24879161,value_name:-48V/40/10A,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:24879161,name:-48V/40/10A,struct:null,source:6288553339613210}],source:6288553339613210,value_type:string}",
-            "{id:PEAK_POWER,name:Potência pico,value_id:24879162,value_name:24960VA,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:{number:24960,unit:VA},values:[{id:24879162,name:24960VA,struct:{number:24960,unit:VA},source:6288553339613210}],source:6288553339613210,value_type:number_unit}",
-            "{id:WEIGHT,name:Peso,value_id:null,value_name:6.25 kg,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:{number:6.25,unit:kg},values:[{id:null,name:6.25 kg,struct:{number:6.25,unit:kg},source:6288553339613210}],source:6288553339613210,value_type:number_unit}"
-        ]
-    },
-    {
-        "modelo": "FONTE NOBREAK -48V 30A 15A",
-        "Seller": "ESNETSEG",
-        "Title": "Fonte Jfa Retificadora Nobreak Gerenciável -48v/30a/15a Cor Preto",
-        "Price": 3600.0,
-        "price_previsto": 3849.99,
-        "Listing Type": "gold_pro",
-        "Link": "https://www.mercadolivre.com.br/fonte-jfa-retificadora-nobreak-gerenciavel-48v30a15a-cor-preto/p/MLB27758576#wid=MLB3690078195&sid=unknown",
-        "attributes": [
-            "{id:BRAND,name:Marca,value_id:2466336,value_name:JFA,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:2466336,name:JFA,struct:null,source:1}],source:1,value_type:string}",
-            "{id:COLOR,name:Cor,value_id:52049,value_name:Preto,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:52049,name:Preto,struct:null,source:1}],source:1,value_type:string}",
-            "{id:GTIN,name:Código universal de produto,value_id:null,value_name:7898554805881,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:null,name:7898554805881,struct:null,source:81068639424647}],source:81068639424647,value_type:string}",
-            "{id:ITEM_CONDITION,name:Condição do item,value_id:2230284,value_name:Novo,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:2230284,name:Novo,struct:null,source:81068639424647}],source:81068639424647,value_type:list}",
-            "{id:LINE,name:Linha,value_id:18389100,value_name:Gerenciavel,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:18389100,name:Gerenciavel,struct:null,source:1}],source:1,value_type:string}",
-            "{id:MODEL,name:Modelo,value_id:25396148,value_name:-48v/30a/15a,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:25396148,name:-48v/30a/15a,struct:null,source:1}],source:1,value_type:string}",
-            "{id:PEAK_POWER,name:Potência pico,value_id:16936817,value_name:48VA,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:{number:48,unit:VA},values:[{id:16936817,name:48VA,struct:{number:48,unit:VA},source:1}],source:1,value_type:number_unit}"
-        ]
-    },
-    {
-        "modelo": "FONTE NOBREAK -48V 30A 15A",
-        "Seller": "NBSEG_",
-        "Title": "Fonte Jfa Retificadora Nobreak Gerenciável -48v/30a/15a",
-        "Price": 3750.61,
-        "price_previsto": 3849.99,
-        "Listing Type": "gold_pro",
-        "Link": "https://produto.mercadolivre.com.br/MLB-3851974019-fonte-jfa-retificadora-nobreak-gerenciavel-48v30a15a-_JM",
-        "attributes": [
-            "{id:BRAND,name:Marca,value_id:2466336,value_name:JFA,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:2466336,name:JFA,struct:null,source:6402814585011704}],source:6402814585011704,value_type:string}",
-            "{id:ITEM_CONDITION,name:Condição do item,value_id:2230284,value_name:Novo,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:2230284,name:Novo,struct:null,source:6402814585011704}],source:6402814585011704,value_type:list}",
-            "{id:LINE,name:Linha,value_id:18389100,value_name:Gerenciavel,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:18389100,name:Gerenciavel,struct:null,source:6402814585011704}],source:6402814585011704,value_type:string}",
-            "{id:MODEL,name:Modelo,value_id:25396148,value_name:-48v/30a/15a,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:25396148,name:-48v/30a/15a,struct:null,source:6402814585011704}],source:6402814585011704,value_type:string}",
-            "{id:PEAK_POWER,name:Potência pico,value_id:16936817,value_name:48VA,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:{number:48,unit:VA},values:[{id:16936817,name:48VA,struct:{number:48,unit:VA},source:6402814585011704}],source:6402814585011704,value_type:number_unit}"
-        ]
-    },
-    {
-        "modelo": "FONTE NOBREAK -48V 30A 15A",
-        "Seller": "HENRIBASTOOS",
-        "Title": "Fonte Nobreak -48v/30a/15a Jfa Cor Preto",
-        "Price": 3000.0,
-        "price_previsto": 3849.99,
+        "diferenca": 77.92228031761121,
         "Listing Type": "gold_pro",
         "Link": "https://produto.mercadolivre.com.br/MLB-5068268396-fonte-nobreak-48v30a15a-jfa-cor-preto-_JM",
         "attributes": [
@@ -253,6 +132,7 @@
         "Title": "Fonte Nobreak Retificadora Gerenciável -48v/40a/10a - Jfa",
         "Price": 3999.9,
         "price_previsto": 4349.99,
+        "diferenca": 91.95193552169087,
         "Listing Type": "gold_pro",
         "Link": "https://produto.mercadolivre.com.br/MLB-3430596753-fonte-nobreak-retificadora-gerenciavel-48v40a10a-jfa-_JM",
         "attributes": [
@@ -271,8 +151,9 @@
         "modelo": "FONTE NOBREAK -48V 40A 10A",
         "Seller": "LOJAGIBAPONTOCOM41996469214",
         "Title": "Fonte Nobreak Retificadora Gerenciável -48v/40a/10a Jfa Cor ",
-        "Price": 4083.0,
+        "Price": 4349.0,
         "price_previsto": 4349.99,
+        "diferenca": 99.97724132699156,
         "Listing Type": "gold_pro",
         "Link": "https://produto.mercadolivre.com.br/MLB-4405062172-fonte-nobreak-retificadora-gerenciavel-48v40a10a-jfa-cor-_JM",
         "attributes": [
@@ -291,6 +172,7 @@
         "Title": "Fonte Nobreak Retificadora Gerenciável -48v/40a/10a Jfa Cor Preto",
         "Price": 3769.9,
         "price_previsto": 4099.99,
+        "diferenca": 91.94900475367014,
         "Listing Type": "gold_special",
         "Link": "https://www.mercadolivre.com.br/fonte-nobreak-retificadora-gerenciavel-48v40a10a-jfa-cor-preto/p/MLB27461139#wid=MLB4129099756&sid=unknown",
         "attributes": [
@@ -311,6 +193,7 @@
         "Title": "Fonte Nobreak Retificadora Gerenciável -48v/40a/10a - Jfa",
         "Price": 3769.9,
         "price_previsto": 4099.99,
+        "diferenca": 91.94900475367014,
         "Listing Type": "gold_special",
         "Link": "https://produto.mercadolivre.com.br/MLB-3964591370-fonte-nobreak-retificadora-gerenciavel-48v40a10a-jfa-_JM",
         "attributes": [
@@ -330,6 +213,7 @@
         "Title": "Fonte Retificadora Nobreak Jfa -48v 40a",
         "Price": 3500.0,
         "price_previsto": 4099.99,
+        "diferenca": 85.3660618684436,
         "Listing Type": "gold_special",
         "Link": "https://produto.mercadolivre.com.br/MLB-4869835088-fonte-retificadora-nobreak-jfa-48v-40a-_JM",
         "attributes": [
@@ -338,131 +222,104 @@
         ]
     },
     {
-        "modelo": "FONTE NOBREAK -48V 40A 10A",
-        "Seller": "DINO TELECOM",
-        "Title": "Fonte Nobreak Retificadora Gerenciável -48v/40a/10a - Jfa",
-        "Price": 3999.9,
-        "price_previsto": 4349.99,
-        "Listing Type": "gold_pro",
-        "Link": "https://produto.mercadolivre.com.br/MLB-3430596753-fonte-nobreak-retificadora-gerenciavel-48v40a10a-jfa-_JM",
-        "attributes": [
-            "{id:ALPHANUMERIC_MODEL,name:Modelo alfanumérico,value_id:-1,value_name:null,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:-1,name:null,struct:null,source:3376461333454861}],source:3376461333454861,value_type:string}",
-            "{id:BRAND,name:Marca,value_id:2466336,value_name:JFA,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:2466336,name:JFA,struct:null,source:2860837171021627}],source:2860837171021627,value_type:string}",
-            "{id:COLOR,name:Cor,value_id:52049,value_name:Preto,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:52049,name:Preto,struct:null,source:1183438784296846}],source:1183438784296846,value_type:string}",
-            "{id:GTIN,name:Código universal de produto,value_id:null,value_name:7898554805881,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:null,name:7898554805881,struct:null,source:2860837171021627}],source:2860837171021627,value_type:string}",
-            "{id:ITEM_CONDITION,name:Condição do item,value_id:2230284,value_name:Novo,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:2230284,name:Novo,struct:null,source:2860837171021627}],source:2860837171021627,value_type:list}",
-            "{id:LINE,name:Linha,value_id:null,value_name:Retificadora - Similar Volt Algcom,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:null,name:Retificadora - Similar Volt Algcom,struct:null,source:3376461333454861}],source:3376461333454861,value_type:string}",
-            "{id:MODEL,name:Modelo,value_id:null,value_name:-48V/40/10A,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:null,name:-48V/40/10A,struct:null,source:2860837171021627}],source:2860837171021627,value_type:string}",
-            "{id:PEAK_POWER,name:Potência pico,value_id:null,value_name:24960VA,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:{number:24960,unit:VA},values:[{id:null,name:24960VA,struct:{number:24960,unit:VA},source:2860837171021627}],source:2860837171021627,value_type:number_unit}",
-            "{id:WEIGHT,name:Peso,value_id:null,value_name:6.25 kg,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:{number:6.25,unit:kg},values:[{id:null,name:6.25 kg,struct:{number:6.25,unit:kg},source:1183438784296846}],source:1183438784296846,value_type:number_unit}"
-        ]
-    },
-    {
-        "modelo": "FONTE NOBREAK -48V 40A 10A",
+        "modelo": "INVERSOR OFF GRID SENOIDAL PURA JFA 1000W 48V/220V RACK",
         "Seller": "LOJAGIBAPONTOCOM41996469214",
-        "Title": "Fonte Nobreak Retificadora Gerenciável -48v/40a/10a Jfa Cor ",
-        "Price": 4083.0,
-        "price_previsto": 4349.99,
+        "Title": " Inversor Senoidal Off-grid 1000w 48/220v Pura Jfa Rack",
+        "Price": 3099.0,
+        "price_previsto": 3099.99,
+        "diferenca": 99.96806441311101,
         "Listing Type": "gold_pro",
-        "Link": "https://produto.mercadolivre.com.br/MLB-4405062172-fonte-nobreak-retificadora-gerenciavel-48v40a10a-jfa-cor-_JM",
+        "Link": "https://produto.mercadolivre.com.br/MLB-4409491538-inversor-senoidal-off-grid-1000w-48220v-pura-jfa-rack-_JM",
         "attributes": [
-            "{id:ALPHANUMERIC_MODEL,name:Modelo alfanumérico,value_id:-1,value_name:null,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:-1,name:null,struct:null,source:8021611602487823}],source:8021611602487823,value_type:string}",
             "{id:BRAND,name:Marca,value_id:2466336,value_name:JFA,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:2466336,name:JFA,struct:null,source:8021611602487823}],source:8021611602487823,value_type:string}",
+            "{id:GTIN,name:Código universal de produto,value_id:null,value_name:7898554808707,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:null,name:7898554808707,struct:null,source:385122562515662}],source:4333789534002961,value_type:string}",
             "{id:ITEM_CONDITION,name:Condição do item,value_id:2230284,value_name:Novo,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:2230284,name:Novo,struct:null,source:8021611602487823}],source:8021611602487823,value_type:list}",
-            "{id:LINE,name:Linha,value_id:null,value_name:Retificadora - Similar Volt Algcom,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:null,name:Retificadora - Similar Volt Algcom,struct:null,source:8021611602487823}],source:8021611602487823,value_type:string}",
-            "{id:MODEL,name:Modelo,value_id:null,value_name:-48V/40/10A,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:null,name:-48V/40/10A,struct:null,source:8021611602487823}],source:8021611602487823,value_type:string}",
-            "{id:PEAK_POWER,name:Potência pico,value_id:null,value_name:24960VA,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:{number:24960,unit:VA},values:[{id:null,name:24960VA,struct:{number:24960,unit:VA},source:8021611602487823}],source:8021611602487823,value_type:number_unit}",
-            "{id:WEIGHT,name:Peso,value_id:null,value_name:6.25 kg,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:{number:6.25,unit:kg},values:[{id:null,name:6.25 kg,struct:{unit:kg,number:6.25},source:8021611602487823}],source:8021611602487823,value_type:number_unit}"
+            "{id:LENGTH,name:Comprimento,value_id:null,value_name:341 mm,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:{number:341,unit:mm},values:[{id:null,name:341 mm,struct:{number:341,unit:mm},source:8021611602487823}],source:8021611602487823,value_type:number_unit}",
+            "{id:MAX_OPERATING_POWER,name:Potência máxima de operação,value_id:null,value_name:1000 W,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:{number:1000,unit:W},values:[{id:null,name:1000 W,struct:{number:1000,unit:W},source:3376461333454861}],source:3376461333454861,value_type:number_unit}",
+            "{id:MODEL,name:Modelo,value_id:null,value_name:Inversor de Tensão para MotorHome Nautico Barco Ar Condicionado Energia Solar off grid,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:null,name:Inversor de Tensão para MotorHome Nautico Barco Ar Condicionado Energia Solar off grid,struct:null,source:8021611602487823}],source:8021611602487823,value_type:string}",
+            "{id:PACKAGE_LENGTH,name:Comprimento da embalagem,value_id:null,value_name:29 cm,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:{number:29,unit:cm},values:[{id:null,name:29 cm,struct:{number:29,unit:cm},source:4333789534002961}],source:4333789534002961,value_type:number_unit}",
+            "{id:PACKAGE_WEIGHT,name:Peso da embalagem,value_id:null,value_name:3200 g,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:{number:3200,unit:g},values:[{id:null,name:3200 g,struct:{number:3200,unit:g},source:4333789534002961}],source:4333789534002961,value_type:number_unit}",
+            "{id:SURGE_POWER,name:Potência de pico,value_id:null,value_name:1200 W,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:{number:1200,unit:W},values:[{id:null,name:1200 W,struct:{number:1200,unit:W},source:3376461333454861}],source:3376461333454861,value_type:number_unit}",
+            "{id:WEIGHT,name:Peso,value_id:null,value_name:6.64 kg,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:{number:6.64,unit:kg},values:[{id:null,name:6.64 kg,struct:{number:6.64,unit:kg},source:8021611602487823}],source:8021611602487823,value_type:number_unit}"
         ]
     },
     {
-        "modelo": "FONTE NOBREAK -48V 40A 10A",
-        "Seller": "DINO TELECOM",
-        "Title": "Fonte Nobreak Retificadora Gerenciável -48v/40a/10a Jfa Cor Preto",
-        "Price": 3769.9,
-        "price_previsto": 4099.99,
-        "Listing Type": "gold_special",
-        "Link": "https://www.mercadolivre.com.br/fonte-nobreak-retificadora-gerenciavel-48v40a10a-jfa-cor-preto/p/MLB27461139#wid=MLB4129099756&sid=unknown",
+        "modelo": "INVERSOR OFF GRID SENOIDAL PURA JFA 1000W 48V/220V RACK",
+        "Seller": "TENFEN_IMPORTS",
+        "Title": "Inversor De Corrente Gear Rack Onda Senoidal 1000w 220v 48v",
+        "Price": 2789.91,
+        "price_previsto": 3099.99,
+        "diferenca": 89.99738708834545,
+        "Listing Type": "gold_pro",
+        "Link": "https://produto.mercadolivre.com.br/MLB-3746730849-inversor-de-corrente-gear-rack-onda-senoidal-1000w-220v-48v-_JM",
         "attributes": [
-            "{id:ALPHANUMERIC_MODEL,name:Modelo alfanumérico,value_id:-1,value_name:null,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:-1,name:null,struct:null,source:3376461333454861}],source:3376461333454861,value_type:string}",
-            "{id:BRAND,name:Marca,value_id:2466336,value_name:JFA,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:2466336,name:JFA,struct:null,source:1}],source:1,value_type:string}",
-            "{id:COLOR,name:Cor,value_id:52049,value_name:Preto,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:52049,name:Preto,struct:null,source:1}],source:1,value_type:string}",
-            "{id:GTIN,name:Código universal de produto,value_id:null,value_name:7898554805881,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:null,name:7898554805881,struct:null,source:2860837171021627}],source:2860837171021627,value_type:string}",
-            "{id:ITEM_CONDITION,name:Condição do item,value_id:2230284,value_name:Novo,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:2230284,name:Novo,struct:null,source:2860837171021627}],source:2860837171021627,value_type:list}",
-            "{id:LINE,name:Linha,value_id:24879160,value_name:Retificadora - Similar Volt Algcom,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:24879160,name:Retificadora - Similar Volt Algcom,struct:null,source:1}],source:1,value_type:string}",
-            "{id:MODEL,name:Modelo,value_id:24879161,value_name:-48V/40/10A,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:24879161,name:-48V/40/10A,struct:null,source:1}],source:1,value_type:string}",
-            "{id:PEAK_POWER,name:Potência pico,value_id:24879162,value_name:24960VA,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:{number:24960,unit:VA},values:[{id:24879162,name:24960VA,struct:{unit:VA,number:24960},source:1}],source:1,value_type:number_unit}",
-            "{id:WEIGHT,name:Peso,value_id:7845569,value_name:6.25 kg,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:{number:6.25,unit:kg},values:[{id:7845569,name:6.25 kg,struct:{number:6.25,unit:kg},source:1}],source:1,value_type:number_unit}"
+            "{id:BRAND,name:Marca,value_id:22292586,value_name:Jfa Eletronicos,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:22292586,name:Jfa Eletronicos,struct:null,source:7571550481372610}],source:7571550481372610,value_type:string}",
+            "{id:ITEM_CONDITION,name:Condição do item,value_id:2230284,value_name:Novo,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:2230284,name:Novo,struct:null,source:1}],source:1,value_type:list}",
+            "{id:LENGTH,name:Comprimento,value_id:null,value_name:31 cm,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:{number:31,unit:cm},values:[{id:null,name:31 cm,struct:{number:31,unit:cm},source:1954489517989554}],source:1954489517989554,value_type:number_unit}",
+            "{id:MAX_OPERATING_POWER,name:Potência máxima de operação,value_id:null,value_name:1000 W,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:{number:1000,unit:W},values:[{id:null,name:1000 W,struct:{number:1000,unit:W},source:7571550481372610}],source:7571550481372610,value_type:number_unit}",
+            "{id:MODEL,name:Modelo,value_id:null,value_name:INVERSOR DE VOLTAGEM CONVERSOR DE CORRENTE 1000W 48V-220V,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:null,name:INVERSOR DE VOLTAGEM CONVERSOR DE CORRENTE 1000W 48V-220V,struct:null,source:1954489517989554}],source:1954489517989554,value_type:string}",
+            "{id:SURGE_POWER,name:Potência de pico,value_id:null,value_name:1000 W,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:{number:1000,unit:W},values:[{id:null,name:1000 W,struct:{number:1000,unit:W},source:7571550481372610}],source:7571550481372610,value_type:number_unit}",
+            "{id:WEIGHT,name:Peso,value_id:null,value_name:3 kg,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:{number:3,unit:kg},values:[{id:null,name:3 kg,struct:{number:3,unit:kg},source:7571550481372610}],source:7571550481372610,value_type:number_unit}"
         ]
     },
     {
-        "modelo": "FONTE NOBREAK -48V 40A 10A",
+        "modelo": "INVERSOR OFF GRID SENOIDAL PURA JFA 3000W 48/220V C/ GER RACK",
         "Seller": "DINO TELECOM",
-        "Title": "Fonte Nobreak Retificadora Gerenciável -48v/40a/10a - Jfa",
-        "Price": 3769.9,
-        "price_previsto": 4099.99,
-        "Listing Type": "gold_special",
-        "Link": "https://produto.mercadolivre.com.br/MLB-3964591370-fonte-nobreak-retificadora-gerenciavel-48v40a10a-jfa-_JM",
+        "Title": "Inversor Senoidal Pura 3000w 48v/220v Gerenciável - Jfa",
+        "Price": 5749.9,
+        "price_previsto": 5799.99,
+        "diferenca": 99.13637782134107,
+        "Listing Type": "gold_pro",
+        "Link": "https://produto.mercadolivre.com.br/MLB-3967816730-inversor-senoidal-pura-3000w-48v220v-gerenciavel-jfa-_JM",
         "attributes": [
-            "{id:ALPHANUMERIC_MODEL,name:Modelo alfanumérico,value_id:-1,value_name:null,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:-1,name:null,struct:null,source:3376461333454861}],source:3376461333454861,value_type:string}",
             "{id:BRAND,name:Marca,value_id:2466336,value_name:JFA,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:2466336,name:JFA,struct:null,source:2860837171021627}],source:2860837171021627,value_type:string}",
-            "{id:GTIN,name:Código universal de produto,value_id:null,value_name:7898554805881,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:null,name:7898554805881,struct:null,source:2860837171021627}],source:2860837171021627,value_type:string}",
+            "{id:GTIN,name:Código universal de produto,value_id:null,value_name:7898554808523,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:null,name:7898554808523,struct:null,source:3376461333454861}],source:3376461333454861,value_type:string}",
             "{id:ITEM_CONDITION,name:Condição do item,value_id:2230284,value_name:Novo,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:2230284,name:Novo,struct:null,source:2860837171021627}],source:2860837171021627,value_type:list}",
-            "{id:LINE,name:Linha,value_id:24879160,value_name:Retificadora - Similar Volt Algcom,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:24879160,name:Retificadora - Similar Volt Algcom,struct:null,source:3376461333454861}],source:3376461333454861,value_type:string}",
-            "{id:MODEL,name:Modelo,value_id:24879161,value_name:-48V/40/10A,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:24879161,name:-48V/40/10A,struct:null,source:2860837171021627}],source:2860837171021627,value_type:string}",
-            "{id:PEAK_POWER,name:Potência pico,value_id:24879162,value_name:24960VA,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:{number:24960,unit:VA},values:[{id:24879162,name:24960VA,struct:{number:24960,unit:VA},source:2860837171021627}],source:2860837171021627,value_type:number_unit}",
-            "{id:WEIGHT,name:Peso,value_id:null,value_name:6.25 kg,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:{number:6.25,unit:kg},values:[{id:null,name:6.25 kg,struct:{number:6.25,unit:kg},source:3942444344910321}],source:3942444344910321,value_type:number_unit}"
+            "{id:LENGTH,name:Comprimento,value_id:null,value_name:40 cm,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:{number:40,unit:cm},values:[{id:null,name:40 cm,struct:{number:40,unit:cm},source:3376461333454861}],source:3376461333454861,value_type:number_unit}",
+            "{id:MAX_OPERATING_POWER,name:Potência máxima de operação,value_id:-1,value_name:null,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:-1,name:null,struct:null,source:3376461333454861}],source:3376461333454861,value_type:number_unit}",
+            "{id:MODEL,name:Modelo,value_id:null,value_name:48E220S - SIMILAR VOLT,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:null,name:48E220S - SIMILAR VOLT,struct:null,source:3376461333454861}],source:3376461333454861,value_type:string}",
+            "{id:SURGE_POWER,name:Potência de pico,value_id:null,value_name:3200 W,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:{number:3200,unit:W},values:[{id:null,name:3200 W,struct:{number:3200,unit:W},source:3376461333454861}],source:3376461333454861,value_type:number_unit}",
+            "{id:WEIGHT,name:Peso,value_id:null,value_name:5.8 kg,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:{number:5.8,unit:kg},values:[{id:null,name:5.8 kg,struct:{unit:kg,number:5.8},source:3376461333454861}],source:3376461333454861,value_type:number_unit}"
         ]
     },
     {
-        "modelo": "FONTE NOBREAK -48V 40A 10A",
-        "Seller": "ANTONIO RADIO",
-        "Title": "Fonte Retificadora Nobreak Jfa -48v 40a",
-        "Price": 3500.0,
-        "price_previsto": 4099.99,
+        "modelo": "INVERSOR OFF GRID SENOIDAL PURA JFA 3000W 48/220V C/ GER RACK",
+        "Seller": "TENFEN_IMPORTS",
+        "Title": "Inversor Senoidal Pura Jfa 3000w 48/220v Ger Rack",
+        "Price": 5499.9,
+        "price_previsto": 5799.99,
+        "diferenca": 94.82602556211303,
+        "Listing Type": "gold_pro",
+        "Link": "https://www.mercadolivre.com.br/inversor-senoidal-pura-jfa-3000w-48220v-ger-rack/p/MLB31190967#wid=MLB4587881486&sid=unknown",
+        "attributes": [
+            "{id:BRAND,name:Marca,value_id:2466336,value_name:JFA,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:2466336,name:JFA,struct:null,source:1}],source:1,value_type:string}",
+            "{id:GTIN,name:Código universal de produto,value_id:null,value_name:7894787112147,7896387903897,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:null,name:7894787112147,struct:null,source:6402814585011704},{id:null,name:7896387903897,struct:null,source:7505664420446808}],source:7505664420446808,value_type:string}",
+            "{id:ITEM_CONDITION,name:Condição do item,value_id:2230284,value_name:Novo,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:2230284,name:Novo,struct:null,source:6402814585011704}],source:6402814585011704,value_type:list}",
+            "{id:LENGTH,name:Comprimento,value_id:30645686,value_name:341 mm,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:{number:341,unit:mm},values:[{id:30645686,name:341 mm,struct:{number:341,unit:mm},source:1}],source:1,value_type:number_unit}",
+            "{id:MAX_OPERATING_POWER,name:Potência máxima de operação,value_id:8117510,value_name:3000 W,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:{number:3000,unit:W},values:[{id:8117510,name:3000 W,struct:{number:3000,unit:W},source:1}],source:1,value_type:number_unit}",
+            "{id:MODEL,name:Modelo,value_id:24880666,value_name:Inversor de Tensão para MotorHome Nautico Barco Ar Condicionado Energia Solar off grid,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:24880666,name:Inversor de Tensão para MotorHome Nautico Barco Ar Condicionado Energia Solar off grid,struct:null,source:1}],source:1,value_type:string}",
+            "{id:SURGE_POWER,name:Potência de pico,value_id:20000412,value_name:3600 W,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:{number:3600,unit:W},values:[{id:20000412,name:3600 W,struct:{number:3600,unit:W},source:1}],source:1,value_type:number_unit}",
+            "{id:WEIGHT,name:Peso,value_id:21264190,value_name:6.64 kg,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:{number:6.64,unit:kg},values:[{id:21264190,name:6.64 kg,struct:{number:6.64,unit:kg},source:1}],source:1,value_type:number_unit}"
+        ]
+    },
+    {
+        "modelo": "INVERSOR OFF GRID SENOIDAL PURA JFA 3000W 48/220V C/ GER RACK",
+        "Seller": "DINO TELECOM",
+        "Title": "Inversor Senoidal Pura 3000w 48v/220v Gerenciável - Jfa",
+        "Price": 5399.9,
+        "price_previsto": 5599.99,
+        "diferenca": 96.42695790528197,
         "Listing Type": "gold_special",
-        "Link": "https://produto.mercadolivre.com.br/MLB-4869835088-fonte-retificadora-nobreak-jfa-48v-40a-_JM",
+        "Link": "https://produto.mercadolivre.com.br/MLB-3430690155-inversor-senoidal-pura-3000w-48v220v-gerenciavel-jfa-_JM",
         "attributes": [
-            "{id:BRAND,name:Marca do produto eletrônico,value_id:2466336,value_name:JFA,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:2466336,name:JFA,struct:null,source:6402814585011704}],source:6402814585011704,value_type:string}",
-            "{id:ITEM_CONDITION,name:Condição do item,value_id:2230581,value_name:Usado,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:2230581,name:Usado,struct:null,source:6402814585011704}],source:6402814585011704,value_type:list}"
-        ]
-    },
-    {
-        "modelo": "INVERSOR OFF GRID SENOIDAL PURA JFA 3000W 48/220V C/ GER RACK",
-        "Seller": "TENFEN_IMPORTS",
-        "Title": "Inversor Senoidal Pura Jfa 3000w 48/220v Ger Rack",
-        "Price": 5499.9,
-        "price_previsto": 5799.99,
-        "Listing Type": "gold_pro",
-        "Link": "https://www.mercadolivre.com.br/inversor-senoidal-pura-jfa-3000w-48220v-ger-rack/p/MLB31190967#wid=MLB4587881486&sid=unknown",
-        "attributes": [
-            "{id:BRAND,name:Marca,value_id:2466336,value_name:JFA,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:2466336,name:JFA,struct:null,source:1}],source:1,value_type:string}",
-            "{id:GTIN,name:Código universal de produto,value_id:null,value_name:7894787112147,7896387903897,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:null,name:7894787112147,struct:null,source:6402814585011704},{id:null,name:7896387903897,struct:null,source:7505664420446808}],source:7505664420446808,value_type:string}",
-            "{id:ITEM_CONDITION,name:Condição do item,value_id:2230284,value_name:Novo,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:2230284,name:Novo,struct:null,source:6402814585011704}],source:6402814585011704,value_type:list}",
-            "{id:LENGTH,name:Comprimento,value_id:30645686,value_name:341 mm,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:{number:341,unit:mm},values:[{id:30645686,name:341 mm,struct:{number:341,unit:mm},source:1}],source:1,value_type:number_unit}",
-            "{id:MAX_OPERATING_POWER,name:Potência máxima de operação,value_id:8117510,value_name:3000 W,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:{number:3000,unit:W},values:[{id:8117510,name:3000 W,struct:{number:3000,unit:W},source:1}],source:1,value_type:number_unit}",
-            "{id:MODEL,name:Modelo,value_id:24880666,value_name:Inversor de Tensão para MotorHome Nautico Barco Ar Condicionado Energia Solar off grid,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:24880666,name:Inversor de Tensão para MotorHome Nautico Barco Ar Condicionado Energia Solar off grid,struct:null,source:1}],source:1,value_type:string}",
-            "{id:SURGE_POWER,name:Potência de pico,value_id:20000412,value_name:3600 W,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:{number:3600,unit:W},values:[{id:20000412,name:3600 W,struct:{number:3600,unit:W},source:1}],source:1,value_type:number_unit}",
-            "{id:WEIGHT,name:Peso,value_id:21264190,value_name:6.64 kg,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:{number:6.64,unit:kg},values:[{id:21264190,name:6.64 kg,struct:{number:6.64,unit:kg},source:1}],source:1,value_type:number_unit}"
-        ]
-    },
-    {
-        "modelo": "INVERSOR OFF GRID SENOIDAL PURA JFA 3000W 48/220V C/ GER RACK",
-        "Seller": "TENFEN_IMPORTS",
-        "Title": "Inversor Senoidal Pura Jfa 3000w 48/220v Ger Rack",
-        "Price": 5499.9,
-        "price_previsto": 5799.99,
-        "Listing Type": "gold_pro",
-        "Link": "https://www.mercadolivre.com.br/inversor-senoidal-pura-jfa-3000w-48220v-ger-rack/p/MLB31190967#wid=MLB4587881486&sid=unknown",
-        "attributes": [
-            "{id:BRAND,name:Marca,value_id:2466336,value_name:JFA,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:2466336,name:JFA,struct:null,source:1}],source:1,value_type:string}",
-            "{id:GTIN,name:Código universal de produto,value_id:null,value_name:7894787112147,7896387903897,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:null,name:7894787112147,struct:null,source:6402814585011704},{id:null,name:7896387903897,struct:null,source:7505664420446808}],source:7505664420446808,value_type:string}",
-            "{id:ITEM_CONDITION,name:Condição do item,value_id:2230284,value_name:Novo,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:2230284,name:Novo,struct:null,source:6402814585011704}],source:6402814585011704,value_type:list}",
-            "{id:LENGTH,name:Comprimento,value_id:30645686,value_name:341 mm,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:{number:341,unit:mm},values:[{id:30645686,name:341 mm,struct:{number:341,unit:mm},source:1}],source:1,value_type:number_unit}",
-            "{id:MAX_OPERATING_POWER,name:Potência máxima de operação,value_id:8117510,value_name:3000 W,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:{number:3000,unit:W},values:[{id:8117510,name:3000 W,struct:{number:3000,unit:W},source:1}],source:1,value_type:number_unit}",
-            "{id:MODEL,name:Modelo,value_id:24880666,value_name:Inversor de Tensão para MotorHome Nautico Barco Ar Condicionado Energia Solar off grid,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:24880666,name:Inversor de Tensão para MotorHome Nautico Barco Ar Condicionado Energia Solar off grid,struct:null,source:1}],source:1,value_type:string}",
-            "{id:SURGE_POWER,name:Potência de pico,value_id:20000412,value_name:3600 W,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:{number:3600,unit:W},values:[{id:20000412,name:3600 W,struct:{number:3600,unit:W},source:1}],source:1,value_type:number_unit}",
-            "{id:WEIGHT,name:Peso,value_id:21264190,value_name:6.64 kg,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:{number:6.64,unit:kg},values:[{id:21264190,name:6.64 kg,struct:{number:6.64,unit:kg},source:1}],source:1,value_type:number_unit}"
+            "{id:BRAND,name:Marca,value_id:2466336,value_name:JFA,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:2466336,name:JFA,struct:null,source:6808261514773724}],source:6808261514773724,value_type:string}",
+            "{id:GTIN,name:Código universal de produto,value_id:null,value_name:7898554808523,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:null,name:7898554808523,struct:null,source:3376461333454861}],source:3376461333454861,value_type:string}",
+            "{id:ITEM_CONDITION,name:Condição do item,value_id:2230284,value_name:Novo,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:2230284,name:Novo,struct:null,source:6808261514773724}],source:6808261514773724,value_type:list}",
+            "{id:LENGTH,name:Comprimento,value_id:null,value_name:40 cm,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:{number:40,unit:cm},values:[{id:null,name:40 cm,struct:{number:40,unit:cm},source:3376461333454861}],source:3376461333454861,value_type:number_unit}",
+            "{id:MAX_OPERATING_POWER,name:Potência máxima de operação,value_id:-1,value_name:null,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:-1,name:null,struct:null,source:3376461333454861}],source:3376461333454861,value_type:number_unit}",
+            "{id:MODEL,name:Modelo,value_id:null,value_name:48E220S - SIMILAR VOLT,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:null,values:[{id:null,name:48E220S - SIMILAR VOLT,struct:null,source:3376461333454861}],source:3376461333454861,value_type:string}",
+            "{id:SURGE_POWER,name:Potência de pico,value_id:null,value_name:3200 W,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:{number:3200,unit:W},values:[{id:null,name:3200 W,struct:{number:3200,unit:W},source:3376461333454861}],source:3376461333454861,value_type:number_unit}",
+            "{id:WEIGHT,name:Peso,value_id:null,value_name:5.8 kg,attribute_group_id:OTHERS,attribute_group_name:Outros,value_struct:{number:5.8,unit:kg},values:[{id:null,name:5.8 kg,struct:{number:5.8,unit:kg},source:3376461333454861}],source:3376461333454861,value_type:number_unit}"
         ]
     }
 ]
