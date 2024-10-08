@@ -1,3 +1,4 @@
+from unidecode import unidecode
 import keyboard
 from lxml import html
 from collections import defaultdict
@@ -181,8 +182,8 @@ for option in tqdm(options_req):
         ]
     else:
         params_list = [
-            {"search_filters": "BRAND=2466336@"},
-            {"search_filters": "BRAND=22292586@"},
+            {"search_filters": "BRAND=2466336@condition=new@"},
+            {"search_filters": "BRAND=22292586@condition=new@"},
         ]
         
     for params in params_list:
@@ -206,7 +207,7 @@ for option in tqdm(options_req):
 
             # Filtrar os resultados
             for item in results:
-                title = item.get('title', '').lower()
+                title = unidecode(item.get('title', '').lower())
                 price = item.get('price', float('inf'))
                 real_price = item.get('original_price', float('inf'))
                 link = item.get('permalink', '')
@@ -226,83 +227,83 @@ for option in tqdm(options_req):
                                     cupom = f"KIT: {num_kits} UNIDADES"
                         if listing_type_id == "gold_pro" and price < equalizadorPremium:
                             item['diferenca'] = get_diferenca(price, equalizadorPremium)
-                            item['price_previsto'] = equalizadorPremium
+                            item['price_previsto'] = equalizadorPremium + 0.01
                             all_filtered_results.append(item) 
 
                         elif price < equalizadorClassico:
                             item['diferenca'] = get_diferenca(price, equalizadorClassico)
                             if item['diferenca'] > 70:
-                                item['price_previsto'] = equalizadorClassico
+                                item['price_previsto'] = equalizadorClassico + 0.01
                                 all_filtered_results.append(item)
                 elif option == "FONTE NOBREAK 12V/8A":
                     item['modelo'] = "FONTE NOBREAK 12V/8A"
-                    if "fonte" in title and "nobreak" in title and "12v" in title and "8a" in title:
+                    if "fonte" in title and ("nobreak" in title or "gerenciavel" in title) and "12v" in title and "8a" in title:
                         if listing_type_id == "gold_pro" and price < fonte12v8aPremium:
                             item['diferenca'] = get_diferenca(price, fonte12v8aPremium)
                             if item['diferenca'] > 70:
-                                item['price_previsto'] = fonte12v8aPremium
+                                item['price_previsto'] = fonte12v8aPremium + 0.01
                                 all_filtered_results.append(item) 
 
                         elif price < fonte12v8aClassico:
                             item['diferenca'] = get_diferenca(price, fonte12v8aClassico)
                             if item['diferenca'] > 70:
-                                item['price_previsto'] = fonte12v8aClassico                            
+                                item['price_previsto'] = fonte12v8aClassico                             + 0.01
                                 all_filtered_results.append(item)
                 elif option == "FONTE NOBREAK 24V/6A":
                     item['modelo'] = "FONTE NOBREAK 24V/6A"
-                    if "fonte" in title and "nobreak" in title and "24v" in title and "6a" in title:
+                    if "fonte" in title and ("nobreak" in title or "gerenciavel" in title) and "24v" in title and "6a" in title:
                         if listing_type_id == "gold_pro" and price < fonte24v6aPremium:
                             item['diferenca'] = get_diferenca(price, fonte24v6aPremium)
                             if item['diferenca'] > 70:
-                                item['price_previsto'] = fonte24v6aPremium
+                                item['price_previsto'] = fonte24v6aPremium + 0.01
                                 all_filtered_results.append(item) 
 
                         elif price < fonte24v6aClassico:
                             item['diferenca'] = get_diferenca(price, fonte24v6aClassico)
                             if item['diferenca'] > 70:
-                                item['price_previsto'] = fonte24v6aClassico                            
+                                item['price_previsto'] = fonte24v6aClassico                             + 0.01
                                 all_filtered_results.append(item)
                 elif option == "FONTE NOBREAK -48V 15A 15A":
                     item['modelo'] = "FONTE NOBREAK -48V 15A 15A"
-                    if "fonte" in title and "nobreak" in title and "48v" in title and "15a" in title:
+                    if "fonte" in title and ("nobreak" in title or "gerenciavel" in title) and "48v" in title and "15a" in title:
                         if listing_type_id == "gold_pro" and price < fonte48v15aPremium:
                             item['diferenca'] = get_diferenca(price, fonte48v15aPremium)
                             if item['diferenca'] > 70:
-                                item['price_previsto'] = fonte48v15aPremium
+                                item['price_previsto'] = fonte48v15aPremium + 0.01
                                 all_filtered_results.append(item) 
 
                         elif price < fonte48v15aClassico:
                             item['diferenca'] = get_diferenca(price, fonte48v15aClassico)
                             if item['diferenca'] > 70:
-                                item['price_previsto'] = fonte48v15aClassico                            
+                                item['price_previsto'] = fonte48v15aClassico                             + 0.01
                                 all_filtered_results.append(item)
                 elif option == "FONTE NOBREAK -48V 30A 15A":
                     item['modelo'] = "FONTE NOBREAK -48V 30A 15A"
-                    if "fonte" in title and "nobreak" in title and "48v" in title and "30a" in title:
+                    if "fonte" in title and ("nobreak" in title or "gerenciavel" in title) and "48v" in title and "30a" in title:
                         if listing_type_id == "gold_pro" and price < fonte48v30aPremium:
                             item['diferenca'] = get_diferenca(price, fonte48v30aPremium)
                             if item['diferenca'] > 70:
-                                item['price_previsto'] = fonte48v30aPremium
+                                item['price_previsto'] = fonte48v30aPremium + 0.01
                                 all_filtered_results.append(item) 
 
                         elif price < fonte48v30aClassico:
                             item['diferenca'] = get_diferenca(price, fonte48v30aClassico)
                             if item['diferenca'] > 70:
-                                item['price_previsto'] = fonte48v30aClassico                            
+                                item['price_previsto'] = fonte48v30aClassico                             + 0.01
                                 all_filtered_results.append(item)
                 elif option == "FONTE NOBREAK -48V 40A 10A":
                     item['modelo'] = "FONTE NOBREAK -48V 40A 10A"
-                    if "fonte" in title and "nobreak" in title and ("48v" in title or "48" in title) and ("40a" in title or "40" in title):
+                    if "fonte" in title and ("nobreak" in title or "gerenciavel" in title) and ("48v" in title or "48" in title) and ("40a" in title or "40" in title):
                         if listing_type_id == "gold_pro" and price < fonte48v40aPremium:
                             item['diferenca'] = get_diferenca(price, fonte48v40aPremium)
                             if item['diferenca'] > 70:
-                                item['price_previsto'] = fonte48v40aPremium
+                                item['price_previsto'] = fonte48v40aPremium + 0.01
                                 all_filtered_results.append(item) 
 
                         elif price < fonte48v40aClassico:
                             item['diferenca'] = get_diferenca(price, fonte48v40aClassico)
                             if item['diferenca'] > 70:
-                                item['price_previsto'] = fonte48v40aClassico                            
+                                item['price_previsto'] = fonte48v40aClassico                             + 0.01
                                 all_filtered_results.append(item)
                 elif option == "INVERSOR SENOIDAL JFA 1000W":
                     item['modelo'] = "INVERSOR OFF GRID SENOIDAL PURA JFA 1000W 48V/220V RACK"
@@ -310,13 +311,13 @@ for option in tqdm(options_req):
                         if listing_type_id == "gold_pro" and price < inversor1000wPremium:
                             item['diferenca'] = get_diferenca(price, inversor1000wPremium)
                             if item['diferenca'] > 70:
-                                item['price_previsto'] = inversor1000wPremium
+                                item['price_previsto'] = inversor1000wPremium + 0.01
                                 all_filtered_results.append(item) 
 
                         elif price < inversor1000wClassico:
                             item['diferenca'] = get_diferenca(price, inversor1000wClassico)
                             if item['diferenca'] > 70:
-                                item['price_previsto'] = inversor1000wClassico                            
+                                item['price_previsto'] = inversor1000wClassico                             + 0.01
                                 all_filtered_results.append(item)
                 elif option == "INVERSOR SENOIDAL JFA 3000W":
                     item['modelo'] = "INVERSOR OFF GRID SENOIDAL PURA JFA 3000W 48/220V C/ GER RACK"
@@ -324,13 +325,13 @@ for option in tqdm(options_req):
                         if listing_type_id == "gold_pro" and price < inversor3000wPremium:
                             item['diferenca'] = get_diferenca(price, inversor3000wPremium)
                             if item['diferenca'] > 70:
-                                item['price_previsto'] = inversor3000wPremium
+                                item['price_previsto'] = inversor3000wPremium + 0.01
                                 all_filtered_results.append(item) 
 
                         elif price < inversor3000wClassico:
                             item['diferenca'] = get_diferenca(price, inversor3000wClassico)
                             if item['diferenca'] > 70:
-                                item['price_previsto'] = inversor3000wClassico                            
+                                item['price_previsto'] = inversor3000wClassico                             + 0.01
                                 all_filtered_results.append(item)
                 elif option == "INVERSOR SENOIDAL JFA 5000W":
                     item['modelo'] = "INVERSOR OFF GRID SENOIDAL PURA JFA 5000W 48/220V C/ GER RACK"
@@ -338,11 +339,11 @@ for option in tqdm(options_req):
                         if listing_type_id == "gold_pro" and price < inversor5000wPremium:
                             item['diferenca'] = get_diferenca(price, inversor5000wPremium)
                             if item['diferenca'] > 70:
-                                item['price_previsto'] = inversor5000wPremium
+                                item['price_previsto'] = inversor5000wPremium + 0.01
                                 all_filtered_results.append(item) 
 
                         elif price < inversor5000wClassico:
-                            item['price_previsto'] = inversor5000wClassico 
+                            item['price_previsto'] = inversor5000wClassico  + 0.01
                             if item['diferenca'] > 70:
                                 item['diferenca'] = get_diferenca(price, inversor5000wClassico)                           
                                 all_filtered_results.append(item)
@@ -367,7 +368,7 @@ def get_loja(loja):
         tree = html.fromstring(response.content)
         
         # Extrair o texto do elemento especificado pelo XPath
-        loja_info = tree.xpath('//*[@id="profile"]/div/div[2]/div[1]/div[3]/p/text()')
+        loja_info = tree.xpath('//*[@id="profile"]/div/div[2]/div[1]/div[3]/p/font/font/text()')
         
         if loja_info:
             return loja_info[0].strip() 
@@ -387,95 +388,66 @@ def get_greeting():
         return "Boa noite!"
 
 def enviar(grouped_by_seller):
-    whatsapp_window = None
-    for window in gw.getAllTitles():
-        if 'WhatsApp' in window:
-            whatsapp_window = gw.getWindowsWithTitle(window)[0]
-            break
-
-    # Se a janela foi encontrada, traz para o foco
-    if whatsapp_window is not None:
-        try:
-            whatsapp_window.activate()
-            time.sleep(1)  # Espera um pouco para garantir que a janela está em foco
-
-            # Pressiona Ctrl+F para abrir a busca
-            pyautogui.hotkey('ctrl', 'f')
-            time.sleep(1)
-            # Digita o texto desejado
-            pyautogui.typewrite('politica telecom ml')
-            time.sleep(1)
-            
-            # Pressiona Tab e Enter
-            pyautogui.press('tab')
-            time.sleep(1)
-            pyautogui.press('enter')
-            time.sleep(1)
-        except Exception as e:
-            print(f"Erro ao interagir com a janela do WhatsApp: {e}")
-            return
-    else:
-        print("Janela do WhatsApp não encontrada.")
-        return
-
+    requests.post("http://localhost:3000/api/sendText", {
+        "chatId": "120363026494101932@g.us",
+        "text": f"{get_greeting()} \n Segue anúncios fora da política",
+        "session": "default"
+    })
     try:
-        keyboard.write(get_greeting())
-        time.sleep(1)
-        pyautogui.press('enter')
-        time.sleep(1)
-        keyboard.write("Segue anúncios fora da política")
-        time.sleep(1)
-        pyautogui.press('enter')
         for seller, items in grouped_by_seller.items():
-            time.sleep(1)
-            keyboard.write(f"*{seller}*")
-            time.sleep(1)
-            pyautogui.hotkey('ctrl', 'enter')
+            dados = f"*{seller}* \n"
             time.sleep(1)
             for item in items:
-                if item['Listing Type'] == "gold_special":
-                    item['Listing Type'] = "Clássico"
+                if item['listing_type'] == "gold_special":
+                    item['listing_type'] = "Clássico"
                 else:
-                    item['Listing Type'] = "Premium"
+                    item['listing_type'] = "Premium"
                 
-                loja_info = get_loja(item['Seller'])
-                keyboard.write(f"{item['modelo']} - {item['Seller']} - {loja_info} - Preço Anúncio: {item['Price']} - Preço Política: {item['price_previsto']} ({item['Listing Type']})")
-                time.sleep(1)
-                pyautogui.hotkey('ctrl', 'enter')
-                time.sleep(1)
-                keyboard.write(f"{item['Link']}")
-                time.sleep(1)
-                pyautogui.hotkey('ctrl', 'enter')
-                time.sleep(1)
-            pyautogui.press('enter')
+                loja_info = get_loja(item['seller'])
+                dados =  dados + f"{item['model']} - {item['seller']} - {loja_info} - Preço Anúncio: {item['price']} - Preço Política: {item['predicted_price']} ({item['listing_type']}) \n {item['link']} \n"
+            requests.post("http://localhost:3000/api/sendText", {
+            "chatId": "120363337104474327@g.us",
+            "text": dados,
+            "session": "default"
+            })  
     except Exception as e:
         print(f"Erro ao enviar mensagens: {e}")
 
 
 formatted_results = [
     {
-        "modelo": result['modelo'],
-        "Seller": result['sellernickname'],
-        "Title": result['title'],
-        "Price": result['price'],
-        "price_previsto": result['price_previsto'],
-        "diferenca": result['diferenca'],
-        "Listing Type": result['listing_type_id'],
-        "Link": result['permalink'],
-        "attributes": result['attributes'],
+        "image": result['thumbnail'],
+        "model": result['modelo'],
+        "seller": result['sellernickname'],
+        "title": result['title'],
+        "price": result['price'],   
+        "predicted_price": result['price_previsto'],
+        "listing_type": result['listing_type_id'],
+        "link": result['permalink'],
     }
     for result in all_filtered_results
 ]
 
+# requests.delete('https://expertinvest.com.br/api/v1/politica-telecom/deletar-todos')
+# time.sleep(5)
+
+# for result in formatted_results:
+#     response = requests.post('https://expertinvest.com.br/api/v1/politica-telecom', json=result)
+#     if response.status_code != 200:
+#         print(f"Erro ao enviar dados para a API: {response.status_code}")
+
+
 grouped_by_seller = defaultdict(list)
 
 for item in formatted_results:
-    seller = item['Seller']
+    seller = item['seller']
     grouped_by_seller[seller].append(item)
     
 grouped_by_seller = dict(grouped_by_seller)
-
+    
 enviar(grouped_by_seller)
+
+
 
 # Salva os dados em um arquivo JSON
 
